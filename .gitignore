@@ -5,4 +5,7 @@ node_modules/
 tmp
 .DS_Store
 .idea
-app/dist/js/
+app/dist
+app/bower_components
+appB/dist
+appB/bower_components
