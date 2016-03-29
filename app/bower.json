@@ -1,0 +1,18 @@
+{
+  "name": "toyHut",
+  "homepage": "https://github.com/mango-wang/toyHut",
+  "authors": [
+    "mango"
+  ],
+  "description": "toyHut back-stage management",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
