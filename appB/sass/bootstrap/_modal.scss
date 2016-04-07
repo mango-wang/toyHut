@@ -1,0 +1,63 @@
+// 弹框
+.r-modal{
+  .modal-content{
+    height:100%;border:0px !important;
+  }
+  .modal-header{
+    height:38px;padding:0 20px;background-color:color(brand);border-radius:5px 5px 0px 0px;
+  }
+  .close{
+    opacity:1;outline:none;
+    &:hover{
+      opacity:1;
+    }
+    span{
+      width:17px;height:17px;display: block;margin:11px 0 0 0;background:url("../images/close.png") no-repeat;
+    }
+  }
+  .modal-title{
+    font-size:14px;line-height:38px;color:color(white);float: left;
+  }
+  .modal-body{
+    min-height:115px;max-height:455px;padding:20px;
+    &.algin-center{
+      padding: 40px 11% 35px;
+    }
+  }
+  .modal-footer{
+    height:48px;padding:0 20px;background-color:color(gray,white); border-radius:0px 0px 5px 5px;
+    line-height:42px;
+  }
+}
+.modal-open{
+  overflow: visible !important; padding-right: 0 !important;
+}
+// 大小
+.modal-sm{
+  width:440px;
+}
+.modal-smd{
+  width:550px;
+}
+.modal-md{
+  width:680px;
+}
+.modal-lg{
+  width:830px;
+}
+
+// alert 弹窗
+.m-alert{
+  font-size: $font-size-large;width: 75%;margin-left:auto;margin-right:auto;margin-top:15px;margin-bottom:15px;position: relative;min-height: 45px;overflow: hidden;
+  .alert-icon{
+    float:left;width: 45px;height: 45px;margin-right: 10px;
+  }
+  .alert-txt{
+    float:left;display:inline-block;line-height: 45px;width: 85%;
+  }
+}
+.multiple-alert{
+  .alert-txt{
+    line-height: 22px;
+  }
+}

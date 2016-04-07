@@ -1,0 +1,44 @@
+// checkbox radio
+
+// checkbox
+.r-checkbox{
+  @extend %icheck;
+  label{
+    background-position: 0 0;
+  }
+  input[type='checkbox']:checked + label{
+    background-position: 0 -30px;
+  }
+  &.disabled{
+    label{
+      background-position: 0 -60px;
+    }
+    input[type='checkbox']:checked + label{
+      background-position: 0 -90px;
+    }
+  }
+}
+
+// radio
+.r-radio{
+  @extend %icheck;
+  label{
+    background-position: 0 -120px;
+  }
+  input[type='radio']:checked + label{
+    background-position: 0 -150px;
+  }
+  &.disabled{
+    label{
+      background-position: 0 -180px;
+    }
+    input[type='radio']:checked + label{
+      background-position: 0 -210px;
+    }
+  }
+  &.light{
+    label{
+      color:color(gray);
+    }
+  }
+}

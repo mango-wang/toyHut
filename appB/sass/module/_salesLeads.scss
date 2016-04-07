@@ -1,0 +1,326 @@
+//销售线索管理列表页
+//多数样式与联系人保持一致，可同时修改
+//右上角的背景图片
+.g-sales {
+  background-image: url("../images/saleslead-bg.jpg");;background-position: bottom right;background-repeat: no-repeat;
+}
+//配置按钮样式
+.link-icon-dark.r-link-icon-dark {
+  padding: 2px;
+  span {
+    margin-right: 0;
+    float: left;
+  }
+}
+//列表内字段设置
+.leads-grid {
+  table {
+    > thead {
+      .checks{
+        min-width: 40px;
+      }
+      .id{
+        min-width: 50px;
+      }
+      .name,.handleState,.operate{
+        min-width: 70px;
+      }
+      .contact{
+        min-width: 100px;
+      }
+      .company{
+        min-width: 160px;
+      }
+      .addtime{
+        min-width:120px;
+      }
+      .VOC {
+        min-width: 220px;
+      }
+    }
+    > tbody {
+      .dark {
+        color: #a0a0a0;
+      }
+    }
+    > tfoot {
+      .blueDark {
+        color: #456d9f;
+      }
+    }
+  }
+}
+
+//配置页
+//配置内小标题提示
+.config-titleTip {
+  padding-top: 5px;
+  color: #999999;
+}
+//默认时间修改
+.config-time {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  padding-top: 5px;
+  margin-bottom: 24px;
+  line-height: 26px;
+  span, a {
+    font-weight: normal;
+  }
+  a {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .config-changeTime {
+    display: none;
+    input {
+      font-size: 14px;
+      color: #333;
+      width: 100px;
+      display: inline-block;
+      font-weight: normal;
+      height: 22px;
+    }
+    .btn {
+      height: 24px;
+    }
+  }
+}
+//字典列
+.config-wordbooks {
+  .wordbook, .add-wordbook {
+    width: 18%;
+    float: left;
+    margin: 2px 2% 2px 0;
+  }
+  .wordbook {
+    position:relative;
+    padding: 0 20px 0 4px;
+    line-height: 24px;
+    white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+    &:hover {
+      background-color: #cee5f6;
+    }
+    &:before {
+      content: '';
+      height: 3px;
+      width: 3px;
+      background-color: #999;
+      display: inline-block;
+      margin: 4px;
+    }
+    .icon-o-delete {
+      float: right;
+      position: absolute;right:0px;top:2px;
+      margin: 2px;
+      display: none;
+    }
+  }
+  .add-wordbook {
+    input {
+      display: inline-block;
+      width: 130px;
+    }
+    .btn {
+      height: 25px;
+      padding-top: 3px;
+    }
+  }
+}
+
+//销售线索详情
+.check-menu-box{
+  position: absolute;
+  right: 0;
+  top: -6px;
+  .m-check{
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+  }
+}
+.m-tag{
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+  height: 55px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: color(white);
+  padding: 0 5px 12px 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.m-tag-warning{
+  background-image: url("../images/m-tag-warning.png");
+}
+.m-tag-disable{
+  background-image: url("../images/m-tag-disable.png");
+}
+.m-tag-success{
+  background-image: url("../images/m-tag-success.png");
+}
+.m-tag-primary{
+  background-image: url("../images/m-tag-primary.png");
+  line-height: 17px;
+  padding-top: 6px;
+}
+.saler-info{
+  float: left;
+  width: 300px;
+  height: auto;
+  border:1px solid #bfd2e0;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+  .saler-name{
+    width: 298px;
+    height: 55px;
+    padding: 8px 10px;
+    font-size: 26px;
+    color: color(white);
+    background: url("../images/salertitbg.jpg") no-repeat;
+    small{font-size: 12px;}
+  }
+  .saler-info-cont{
+    padding: 10px;
+    margin-bottom: 3px;
+    background: url("../images/salerbg.jpg") bottom center no-repeat;
+    ul{
+      @extend %clearfix;
+      li{width: 50%; float: left; margin-top: 5px;line-height: 20px;vertical-align: bottom;}
+      .saler-email{width: 100%;}
+    }
+    h5{}
+  }
+}
+.m-sale-box{
+  @extend %clearfix;
+  padding:15px 10px 5px;
+}
+.saler-info-r{
+  width: 740px;
+  float: right;
+  text-align: left;
+  .sale-tit{
+    width: 470px;
+    color: (gray);
+    font-size: 26px;
+    letter-spacing: 2px;
+    .tit-import{color: color(gray,darker);}
+    .time{font-size: 14px;letter-spacing: 0; margin-left: 10px;}
+  }
+  .sale-tit-arrow {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+    color: color(gray);
+  }
+}
+i.quotation-marks{font-size: 33px; font-style: normal; font-family: "宋体"; color: color(gray,light); vertical-align: middle;}
+.remark-top{
+  padding: 10px 0 5px;
+  font-weight: bold;
+  color: color(gray);
+  border-bottom: 1px solid color(gray,light);
+}
+.remark-list{
+  li{
+    position: relative;
+    padding: 3px 0 7px;
+    border-bottom: 1px dashed $dash-border-color;
+    .time{color: color(gray); margin-left: 5px;line-height: 24px;}
+    .remark-o-btn{
+      position: absolute; right: 0; top: 3px;display: none;
+      i{cursor: pointer; margin-left: 3px;}
+    }
+    &:hover{.remark-o-btn{display: block;}}
+    div:last-of-type{
+      word-break: break-all;
+    }
+  }
+}
+.otherleads-grid{
+  @extend .grid-white-md;
+  thead{
+    tr{
+      th:nth-of-type(1){width:70px; min-width: 70px;}
+      th:nth-of-type(2){width: 100px;min-width: 100px;}
+      th:nth-of-type(3){width: 250px;}
+      th:nth-of-type(5){width: 180px;}
+    }
+  }
+  tbody{
+    tr{
+      td:nth-of-type(1){width:70px;min-width: 70px;}
+      th:nth-of-type(2){width: 100px;min-width: 100px;}
+      td:nth-of-type(3){width: 250px;}
+      td:nth-of-type(5){width: 180px;}
+    }
+  }
+  .pagination-total{
+    float: right;
+    .link-gray-underline{
+      margin-left: 10px;
+    }
+  }
+}
+.othersale-grid{
+  thead{
+    tr{
+      th:nth-of-type(1){width: 70px;min-width: 70px;}
+      th:nth-of-type(2){width: 80px;min-width: 80px;}
+      th:nth-of-type(6){width: 60px;}
+      th:nth-of-type(7){width: 150px;}
+    }
+  }
+  tbody{
+    tr{
+      td:nth-of-type(1){width: 40px;min-width: 40px;}
+      td:nth-of-type(2){width: 80px;min-width: 80px;}
+      td:nth-of-type(7){
+        width: 150px;
+        a{margin-left: 15px;}
+      }
+    }
+    .disabled td:nth-of-type(4){color: color(gray,darker);}
+  }
+  .pagination-total{
+    float: right;
+    margin-top: 0;
+    a{margin-left: 10px;}
+  }
+}
+.panel-body{
+  .sale-company-ul{
+    float: left;
+    width: 30%;
+    margin-bottom: 10px;
+    > li{
+      @extend %clearfix;
+      margin-top: 2px;
+      line-height: 22px;
+      border-bottom: 1px dashed $dash-border-color;
+      strong{
+        width: 27%;
+        float: left;
+        margin-right: 8%;
+        color: color(gray);
+      }
+      span{float: left;width: 65%;position: relative;}
+    }
+  }
+  .sale-company-ul:nth-of-type(1){margin-left: 1%;}
+  .sale-company-ul:nth-of-type(2){margin: 0 4%;}
+}
+.no-date{color: color(gray,light);}
+
+.panel-contact{
+  .sale-company-ul{
+    > li span{
+      overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+    }
+  }
+}

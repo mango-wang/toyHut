@@ -1,0 +1,12 @@
+//----------------------------
+//定义 @mixin setTag
+//  设置自定义标签组件共有属性
+//----------------------------
+//  $border-color:边框颜色
+//  $padding:内边距
+//=====================================================================
+@mixin setTag ($border-color,$padding){
+  border: 1px solid $border-color;
+  padding: $padding;
+  font-size: 12px;
+}

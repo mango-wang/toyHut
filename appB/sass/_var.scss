@@ -1,5 +1,108 @@
-/* 内容宽度*/
+@import "mixin/color";
 
-$base-content-with: 1024px !default;
-$base-content-with-left: 250px !default;
+// 字号字体
+//
+// font-family fong-size
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-middle:        ceil(($font-size-base * 1.1428)) !default; // ~16px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-smaller:         ceil(($font-size-base * 0.78)) !default; // ~11px
+$font-family-base:        Microsoft YaHei !default;
+$font-family-Eg:          Arial !default;
 
+// 背景颜色
+//
+$bg-color: #f4f4f4 !default;
+$border-color-dark: #ddd !default;
+$border-color: #e2e2e2 !default;
+$panel-heading-color:     #eef7fd;
+$gray-bg-color:           #fafafa;
+
+// link
+//
+// Global textual link color.
+$link-color:           color(brand,light) !default;
+$link-decoration:      none !default;
+$link-hover-color:     $link-color !default;
+$link-hover-decoration:underline !default;
+
+// border
+//
+// 边框
+$link-border:          1px solid color(gray,light);
+$link-border-none:          none;
+$dash-border-color:    #e5e5e5;
+$box-border-color:     #cfdee3;
+
+//border-radius
+//
+// 圆角
+$border-radios:        3px;
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+$border-radios-none:        0;
+
+// sprite
+//
+// 精灵图片
+$icon-sprite-base-class:".sprite-base" !default;
+$icon-width:  20px !default;
+$icon-height:  $icon-width !default;
+
+// Grid system
+//
+// 栅格布局
+$grid-columns:              12 !default;
+$grid-gutter-width:         10px !default;
+
+// 布局间距
+$gutter-width:  $grid-gutter-width !default;
+
+//类型颜色
+$type-red: #f58466 !default;
+$type-green: #78ca4e !default;
+$type-gray: color(gray,light) !default;
+$type-blue: #98bfe0 !default;
+$type-brown: #d9aa62 !default;
+
+//dropdown颜色
+$dropdown-dark-border: #363f49;
+$dropdown-dark-cont:   #425262;
+$dropdown-dark-foot:   #364655;
+$dropdown-dark-font:   #94a2b0;
+
+//tooltip颜色
+$tooltip-arrow-color:        #807731;
+$tooltip-bg:                 #fffad3;
+$tooltip-font-color:        #807731;
+
+// list / grid
+$list-min-height-small: 380px !default;
+$list-min-height-middle: 500px !default;
+$list-min-height-large: 600px !default;
+$pagination-height: 69px !default;;
+
+// form
+$control-height: 24px !default;
+$control-color: #66afe9;
+
+//select
+$select-width-small: 36px !default;
+$select-width-middle:120px;
+$select-width-large: 300px !default;
+$select-padding: 24px !default;
+$select-max-height: 238px !default;
+
+// datePicker
+$datePicker-width-small: 184px !default;
+$datePicker-width-middle: 272px !default;
+$datePicker-width-large: 366px !default;
+
+//浏览器前缀
+$prefix : webkit,moz,ms,o,all;
+
+//字段颜色
+$sort-blue : #b4c8e6;
+$sort-blue-light: #d0dcef;

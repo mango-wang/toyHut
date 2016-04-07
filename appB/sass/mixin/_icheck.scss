@@ -1,0 +1,13 @@
+//
+// 单选多选
+// ====================================================
+%icheck{
+  padding-top: 0 !important;display: inline-block;
+  input[type='checkbox'],input[type='radio']{
+    display: none;
+  }
+  label{
+    line-height: 26px;min-height:26px;padding:0 0 0 20px;background-repeat: no-repeat;margin-bottom: 0;font-weight: normal;display: inline-block;background-image: url("../images/icon-icheck.png");
+  }
+}
+

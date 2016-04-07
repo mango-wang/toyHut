@@ -1,0 +1,49 @@
+
+.g-According-maxWidth{
+  padding-top: 4px !important;padding-bottom: 0 !important;
+  >span{
+    border: 1px solid transparent;
+    border-bottom: none;
+    padding: 5px 16px 7px;
+    color: #333333;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 5px;
+    &.active{
+      border-color: #dedede;background-color: color(white);color:color(brand);
+    }
+  }
+  .r-datePicker,.g-maxWidth-right{
+    display: inline-block;vertical-align: top;margin-top: 1px;
+  }
+
+  .g-maxWidth-right{
+    float: right;
+    span{
+      padding: 1px 7px 2px;border-radius: 0;
+      &:hover{
+        background-color: color(brand);color:color(white);border-color:color(brand,dark);
+      }
+      &.disabled{
+        border: 1px solid color(gray,lighter);background-color: color(gray,lightest);color:color(gray);
+      }
+    }
+  }
+}
+.data-stats{
+  .r-panel-default{
+    margin-bottom: 10px;
+  }
+  .state{
+    line-height: 26px;display: block;
+  }
+}
+.chart-sm{
+  height: 217px;
+}
+.chart-md{
+  height: 264px;
+}
+.chart-lg{
+  height: 416px;
+}

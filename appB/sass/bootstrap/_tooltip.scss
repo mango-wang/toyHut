@@ -1,0 +1,9 @@
+.tooltip.right .tooltip-arrow{
+  border-right-color: $tooltip-arrow-color;
+}
+.tooltip-inner{
+  border-radius: 0;
+  color: color(gray,darker);
+  background-color: $tooltip-bg;
+  border:2px solid $tooltip-font-color;
+}

@@ -1,0 +1,13 @@
+//layout
+.s-left {
+  background-color:color(brand,darker);
+}
+.s-left-header {
+  //background-color:color(brand);
+}
+.s-user{
+  background-color:color(brand,dark);
+  >.dropdown > .btn:focus{
+    background-color:color(brand,dark);
+  }
+}

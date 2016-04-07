@@ -1,0 +1,75 @@
+//状态与饼图文字提示
+.state{
+  color: #555;
+  //圆点基本样式
+  i{
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border-radius:4px;
+    margin-right: 6px;
+    position: relative;
+    top: -1px;
+  }
+  //未处理
+  &.untreated{
+    @include stateColor(color(orange,light));
+  }
+  //验证确认
+  &.valid,&.confirmation{
+    @include stateColor(color(green,lighter));
+  }
+  //已分配
+  &.assigned,&.allocated{
+    @include stateColor(color(cyan,dark));
+  }
+  //验证无效 & 已过期
+  &.invalid,&.overdue{
+    @include stateColor(color(gray,light));
+  }
+  //旧信息
+  &.oldValue{
+    @include stateColor(#a80404);
+  }
+  //新信息
+  &.newValue{
+    @include stateColor(#208d2a);
+  }
+
+  //饼图分类颜色
+  &.pieChartTip-red>i{
+    background-color: #ff6a51;
+  }
+  &.pieChartTip-Brown>i{
+    background-color: #e69651;
+  }
+  &.pieChartTip-Yellow>i{
+    background-color: #fbd340;
+  }
+  &.pieChartTip-Green>i{
+    background-color: #78c750;
+  }
+  &.pieChartTip-cyanDark>i{
+    background-color: color(cyan,dark);
+  }
+  &.pieChartTip-cyan>i{
+    background-color: #7ab6ff;
+  }
+  //dark
+  &.pieChartTip-redd>i{
+    background-color: #d98181;
+  }
+     &.pieChartTip-Brownd>i{
+       background-color: #d8af6a;
+     }
+  &.pieChartTip-cyand>i{
+    background-color: #9ec2e0;
+  }
+  &.pieChartTip-purpled>i{
+    background-color: #6c709c;
+  }
+  &.pieChartTip-Greend>i{
+    background-color: #76b454;
+  }
+  //分类颜色End
+}

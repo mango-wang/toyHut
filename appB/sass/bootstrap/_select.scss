@@ -1,0 +1,86 @@
+//select
+.r-select{
+  padding-right: $select-padding;width:100%;height: $control-height;
+  .btn{
+    border-radius: 0px;font-size: $font-size-small;display: block;height: $control-height;
+    &:hover,&:focus{
+      border-color: darken(color(gray,light),2%) !important;
+    }
+  }
+  .btn:first-of-type{
+    padding: 2px 5px 3px;text-align: left;width: 100%;color:color(gray,darker);
+    &:hover,&:focus,&:active{
+      outline:none;background-color: color(white);
+    }
+  }
+  .btn:nth-of-type(2){
+    padding: 2px 8px 3px 7px;position: absolute;top:0;right: 0;border-left: 1px solid #e7e7e7;
+    .caret{
+      color: color(gray,dark);margin-top: -3px;
+    }
+  }
+  &.open {
+    .btn,.dropdown-menu{
+      border-color:$control-color !important;box-shadow: 0 0 8px lighten($control-color,5%);
+    }
+    .btn:hover{
+      border-color:$control-color !important;
+    }
+  }
+  .dropdown-menu{
+    min-width: 100%;border-radius: 0;padding: 4px 0;
+    >li>a{
+      padding: 3px 8px;width: 100%;font-size: $font-size-small;color:color(gray,darker);
+    }
+  }
+  .dropdown-menu.scroll{
+    max-height: $select-max-height;
+    overflow-y: scroll;
+  }
+}
+.r-select-thin{
+  @extend .r-select;
+  padding-right: 0;
+  .btn{
+    padding: 2px 14px 2px 3px !important;height: $control-height - 4; line-height: 1;
+    &:hover,&:focus{
+      background-color: color(white)!important;
+      .caret{
+        color:color(gray,dark) ;
+      }
+    }
+    .caret{
+      color:color(gray,dark) ;position: absolute;right:5px;top:8px;
+    }
+  }
+  .dropdown-menu{
+    padding: 0;top:20px;
+    >li >a{
+      padding: 3px 8px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    &.scroll{
+      max-height: 138px;
+      overflow-y: scroll;
+    }
+  }
+}
+
+//// 大
+.select-lg{
+   width:$select-width-large;
+ }
+// 中
+.select-md{
+  width:$select-width-middle;
+}
+// 小
+.select-sm{width:$select-width-small;display: inline-block;vertical-align: middle;}
+
+.r-select-thin.select-sm{
+  .dropdown-menu{
+    top:auto;bottom:25px;
+  }
+}

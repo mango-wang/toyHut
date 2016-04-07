@@ -1,0 +1,25 @@
+// 时间控件
+.r-datePicker{
+  position: relative;width: 100%;
+  .form-control{
+    height:$control-height;line-height:18px;border-radius: 0;padding:3px 30px 3px 10px; color: color(gray); font-family: $font-family-Eg;
+  }
+  .icon-c-datepicker{
+    cursor: pointer;position: absolute;right: 2px;top: 1px;width: $control-height - 2;height: $control-height - 2;border-left: 1px solid #dedede;text-align: center;line-height:$control-height;color: color(gray);font-size:14px;
+  }
+}
+.datePicker-sm{
+  width:$datePicker-width-small;
+  + .dateTime-sm{
+    margin-left: 10px;
+  }
+}
+.datePicker-md{
+  width: $datePicker-width-middle;
+}
+.datePicker-lg{
+  width:$datePicker-width-large;
+}
+.dateTime-sm{
+  width: 80px;
+}

@@ -1,0 +1,129 @@
+//----------------------------
+//定义 @mixin links
+//----------------------------
+// $color:默认颜色
+// $underline：是否有下划线
+// $link-hover：鼠标悬浮颜色
+// =================================================================
+@mixin links($color:$link-color,$underline:$link-decoration,$link-hover:$link-hover-color){
+  color:$color; text-decoration:$underline;
+  &:hover{
+    color: $link-hover;text-decoration:underline;
+  }
+  &:focus{
+    color:$color;
+  }
+}
+%link-default{
+  @include links;   //默认蓝色 无下划线   悬浮有下划线
+}
+%link-default-underline{   //默认蓝色 无下划线   悬浮有下划线
+  @include links($link-color,underline,$link-hover-color);
+}
+%link-gray{   //灰色 无下划线   悬浮无划线
+  @include links(color(gray),none,color(gray,dark));
+  &:hover{
+    color: color(gray,dark);text-decoration:none;
+  }
+  &:focus{
+    color:color(gray,dark);
+  }
+}
+%link-gray-underline{   //灰色 有下划线   悬浮无划线
+  @include links(color(gray,dark),underline,color(gray,dark));
+}
+%link-white{
+  @include links(color(white),none,color(white));
+}
+
+//禁用的a链接
+%link-disabled{
+  @include links(color(gray,light),none,color(gray,light));
+  cursor: default;
+  &:hover{text-decoration: none;}
+}
+//%link-primary{
+//  @include links($link-color,underline,$link-hover-color);
+//}
+
+//----------------------------
+//定义 @mixin links 有图标的链接
+//----------------------------
+// $color:默认颜色
+// $underline：是否有下划线
+// $link-hover：鼠标悬浮颜色
+// $border: 边框颜色  边框悬浮颜色$link-hover
+// $radios: 圆角
+// =================================================================
+@mixin links-icon($color:$link-color,$underline:$link-decoration,$link-hover:$link-hover-color,$border:$link-border,$radios:$border-radios){
+  color:$color;line-height: 20px; border: $border; border-radius:$radios;
+  > i{
+    width: 20px;height: 20px;display: inline-block;vertical-align: middle;
+    background-image: image-url("icon-link.png");
+  }
+  span{
+    margin-right: 2px;
+  }
+  .link-gray-r{
+    color: color(gray);
+  }
+  &:hover{
+    color: $link-hover;text-decoration:none;
+    > i{
+      background-image: image-url("icon-link.png");background-position: 0 -120px;
+    }
+    > .link-gray-r{
+      color: $color;
+    }
+  }
+  &:focus{
+    color:$color;
+  }
+}
+
+
+%link-icon-gray{   //灰色#333 无下划线   悬浮无划线
+  @include links-icon(color(gray,darker),none,color(brand,normal),$link-border-none,$border-radios-none);
+  &:hover{
+    color: color(brand,normal);
+  }
+  &:focus{
+    color:color(brand,normal);
+  }
+}
+//有边，图标链接，hover蓝色
+%link-icon-border-sm{
+  @include links-icon(color(gray),none,color(brand,normal),$link-border,$border-radios);
+  padding: 0 2px;
+  &:hover{
+    color: color(brand,normal);border-color: color(brand,normal);
+  }
+  &:focus{
+    color:color(brand,normal);
+  }
+}
+
+//有边，图标链接，hover不变
+%link-icon-border-md{
+  @include links-icon(color(gray,dark),none,color(gray,dark),$link-border,$border-radios);
+  padding: 2px 5px;
+  &:hover{
+    color: color(gray,dark);border-color: color(gray,light);
+  }
+  &:focus{
+    color:color(gray,dark);
+  }
+}
+
+//有边，图标 hover蓝色
+%icon-border{
+  @include links-icon(color(gray),none,color(brand,normal),$link-border,0); padding:1px;
+  >i{
+    vertical-align: top;
+  }
+  &:hover,&:focus {
+    border-color: color(brand,normal);
+  }
+}
+
+

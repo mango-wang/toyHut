@@ -1,0 +1,187 @@
+//layout
+.history-wrap{
+  @extend .clear;
+  width: 1117px;
+}
+.g-top {
+  height:50px; background-color:#fff;border-bottom:#dcdce0 1px solid; box-shadow:0 2px 3px rgba(0,0,0,0.1);margin-bottom:10px;
+}
+.logo-gray{
+  position: relative;
+  height: 34px;
+  img{
+    position: absolute;bottom: 0;
+  }
+  span{
+    position: absolute;bottom: 0; left: 113px; font-size: 16px; line-height: 18px; color: color(brand); font-weight: bold; border-left: 1px solid color(gray,light);    padding-left: 6px;
+  }
+}
+.clear {
+  margin-left:auto;margin-right:auto;
+}
+.g-history {
+  width:1117px;margin:auto;
+}
+.m-history-top{
+  background: $gray-bg-color; padding: 15px 10px;
+}
+.bump-bottom{
+  height: 57px;
+}
+//联系人去重历史记录列表
+.repea-grid{
+  @extend .grid-gray-lg;
+  table {
+//    border: 1px solid color(gray,light);
+    th:first-of-type{
+      width: 78px;
+    }
+    th:nth-of-type(2){
+      width: 260px;
+    }
+    th:nth-of-type(3),th:nth-of-type(4){
+      width: 155px;position: relative;
+    }
+    th:nth-of-type(3),tr td:nth-of-type(3){
+      background-image: url("../images/td-bg.png");background-repeat: repeat-y;background-position: top right;
+    }
+    th:nth-of-type(5){
+      width: 235px;
+    }
+    .icon-b-repeat{
+      width: 8px;position: absolute;top:5px;right: 0;
+    }
+    .icon-b-norepeat{
+      width: 24px;position: absolute;top:5px;left:0;
+    }
+    .m-help-tip{z-index: 10; white-space: normal; text-align: left; font-weight: normal;}
+    tr:hover{
+      td:nth-of-type(3){
+        background-color: #cbdcc8;
+      }
+      td:nth-of-type(4){
+        background-color: #d1e3d0;
+      }
+    }
+  }
+  @include interlace(3,#e7ebeb,#dee2e2);
+  @include interlace(4,#f2f9f9,#eaf1f1);
+}
+//联系人去重数据检查详情
+.data-graid{
+  @extend .grid-gray-lg;
+  table{
+    thead{
+      th:nth-of-type(1){width: 78px;}
+      th:nth-of-type(2){width: 170px;}
+      th:nth-of-type(3){width: 310px;}
+      th:nth-of-type(4){
+        width: 240px;
+        position: relative;
+        .icon-b-repeat{
+          position: absolute; width: 8px; right: 0;
+        }
+      }
+      th:nth-of-type(5){
+        position: relative;
+        .icon-b-norepeat{
+          position: absolute; width: 24px; left: 0;
+        }
+      }
+    }
+    tbody{
+      td:nth-of-type(1){width: 78px;}
+      td:nth-of-type(2){width: 170px;}
+      td:nth-of-type(3){width: 310px;}
+      td:nth-of-type(4){width: 240px;}
+    }
+    th:nth-of-type(4),tr td:nth-of-type(4){
+      background-image: url("../images/td-bg.png");background-repeat: repeat-y;background-position: top right;
+    }
+  }
+  @include interlace(4,#e7ebeb,#dee2e2);
+  @include interlace(5,#f2f9f9,#eaf1f1);
+}
+//去重信息 dropdown
+.trigger{cursor: pointer;}
+.drop-deduplicated{
+  &.dropdown-menu{
+    width: 460px;
+    border-color: #a1aab7;
+  }
+  .arrow{
+    left: 70px;border-bottom-color: #a1aab7;
+  }
+  .deduplicated-info{
+    width: 50%;
+    padding-bottom: 3px;
+    float: left;
+    &:first-of-type{
+      padding-right: 0;
+      table.deduplicated-table{
+        border-right: 1px dashed color(gray,light);
+      }
+    }
+    &:first-of-type {
+      padding-left: 0;
+    }
+  }
+  h3{
+    margin: 0;height: 33px;line-height: 33px;text-align: center;font-size: $font-size-small;font-weight: bold;background-color: $bg-color;position: relative;
+    span,strong{
+      color: color(green,dark);
+    }
+    span{
+      font-weight: normal;
+    }
+    .icon-b-repeat{
+      position: absolute;top:4px;right: -9px; width: 20px;
+    }
+    .icon-b-norepeat{
+      position: absolute;top:4px;left: -2px;width: 25px;
+    }
+  }
+  table.deduplicated-table{
+    font-size: $font-size-small;padding-right: 5px;
+    tr{
+      &:hover{
+        background-color: color(white) !important;
+      }
+    }
+    th{
+      font-weight: normal;color: color(gray,dark);width: 75px;text-align: right;padding:2px 0 2px 10px ;
+    }
+    .c-brand th,.c-brand td{
+      color: color(brand);
+    }
+    td{
+     padding: 2px 8px 2px 0;color: color(gray,darker); background-color: color(white) !important; text-align: left;
+     &:hover{background-color: color(white) !important;}
+      p{
+        width: 140px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/*联系人冻结历史记录*/
+span.font-brand{
+  padding: 0 4px; font-weight: bold; color: #246fa5;
+}
+.froze-grid{
+  @extend .grid-gray-lg;
+  @extend .contact-grid;
+  thead{
+
+  }
+  tbody{
+    td:nth-of-type(5){max-width: 195px;}
+  }
+}
+.font-green{
+  color: color(green);
+}
+.font-red{
+  color: color(red,dark);
+}
+

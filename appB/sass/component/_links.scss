@@ -1,0 +1,94 @@
+// 默认链接
+a{
+  @extend %link-default;display:inline-block;line-height:$control-height + 2; cursor: pointer;
+  &:focus{
+    color: $link-color;
+    outline: none !important;
+  }
+  span{
+    margin-right: 2px;
+  }
+}
+// 蓝色、有下划线链接
+.link-default-underline{
+  @extend %link-default-underline;
+}
+//灰色链接
+.link-gray{
+  @extend %link-gray;
+  &.disabled{
+    color: color(gray,light);
+  }
+}
+.link-gray-underline{
+  @extend %link-gray-underline;
+}
+// 白色链接
+.link-white{
+  @extend %link-white;
+}
+// 蓝色链接
+//.link-primary{
+//  @extend %link-primary;
+//}
+
+//没边框，带图标的链接灰色，hover为蓝色
+.link-icon-gray{
+  @extend %link-icon-gray;
+  .icon-l-edit{background-position: 0 -201px;}
+  .icon-l-det{background-position: 0 -241px;}
+  .icon-l-new{background-position: 0 -280px;}
+  .icon-l-remark{background-position: 0 -400px;}
+  .icon-l-more{background-position: 0 -480px;}
+  .icon-l-history{background-position: 0 -520px;}
+  &:hover{
+    .icon-l-edit{background-position: 0 -221px;}
+    .icon-l-det{background-position: 0 -261px;}
+    .icon-l-new{background-position: 0 -300px;}
+    .icon-l-remark{background-position: 0 -420px;}
+    .icon-l-more{background-position: 0 -500px;}
+    .icon-l-history{background-position: 0 -540px;}
+  }
+}
+//有边,有字，图标链接，灰色,hover蓝色
+.link-icon-border-sm{
+  @extend %link-icon-border-sm;
+  .icon-l-edit{background-position: 0 -320px;}
+  .icon-l-assign{background-position: 0 -440px;}
+  &:hover{
+    .icon-l-edit{background-position: 0 -340px;}
+    .icon-l-assign{background-position: 0 -460px;}
+  }
+
+}
+//有边,有字，图标链接，灰色,hover不变
+.link-icon-border-md{
+  @extend %link-icon-border-md;
+}
+
+//有边，图标链接，无字，灰色#999,hover蓝色
+.icon-border{
+  @extend %icon-border;
+  .icon-l-add{background-position: 0 -360px;}
+  .icon-l-det{background-position: 0 -241px;}
+  &:focus{
+    border-color: color(gray,light);
+  }
+  &:hover{
+    .icon-l-add{background-position: 0 -380px;}
+    .icon-l-det{background-position: 0 -261px;}
+    border-color: color(brand,light);
+  }
+}
+//禁用的a链接
+a.disabled{
+  @extend %link-disabled;
+}
+//a:hover{
+//  >.icon-l-export{
+//    background-image: image-url("../images/icon-link.png");background-position: 0 0px;
+//  }
+//  >.icon-l-import{
+//    background-image: image-url("../images/icon-link.png");background-position: 0 -20px;
+//  }
+//}

@@ -1,0 +1,538 @@
+/* 联系人列表 */
+.g-contact{
+  background-image:url("../images/contact-bg.jpg");background-position: bottom right;background-repeat: no-repeat;
+}
+
+//统计
+.col-md-7{
+  .contact-stats-box{
+    width: 625px;
+  }
+}
+.col-md-5{
+  .contact-stats-box{
+    width: 445px;
+  }
+}
+.contact-stats-box{
+  border: 1px solid $border-color-dark;padding: 10px 15px;overflow: hidden;margin-bottom: $gutter-width;
+}
+.contact-num{
+  width: 108px;float: left;position: relative;margin-right: 15px;
+  small{
+    font-size: $font-size-small;color: color(gray,dark);position: absolute;top:-4px;
+  }
+  strong{
+    font-size: $font-size-middle;color: color(gray,darker);
+  }
+  span{
+    display: block;font-size: 36px;font-family:$font-family-Eg;line-height: 36px;margin-top: 13px;margin-bottom: 10px;text-align: center;
+  }
+  .add-num{
+    color:color(orange,dark);
+  }
+  .total-num{
+    color: color(red);
+  }
+}
+.contact-pct{
+  width: 185px;float: left;margin-top: 12px;
+  dl{
+    overflow: hidden;margin-bottom: 0;
+  }
+  dt,dd{
+    float: left;line-height: 22px;font-weight: normal;
+  }
+  dd:nth-of-type(1){
+    text-align: right;
+  }
+}
+.add-pct{
+  color: color(gray,dark);
+  dt{
+    width: 50px;margin-right: 5px;
+  }
+  dd:first-of-type{
+    width: 37px;font-weight: bold;margin-right: 5px;
+  }
+  dd:last-of-type{
+    width: 60px;
+  }
+  .icon-b-rise,.icon-b-drop{
+    width: 10px;height: 13px;
+  }
+}
+.type-pct{
+  dt{
+    min-width: 60px;margin-right: 10px;
+  }
+  dd:first-of-type{
+    width: 35px;text-align: right;margin-right: 5px;
+  }
+  dd:last-of-type{
+    color: color(gray,dark);
+  }
+}
+.contact-add-chart{
+  width: 285px;height:86px;float: right;
+}
+.contact-type-chart{
+  width: 105px;height: 86px;float: right;
+}
+
+//分类
+.group-box{
+  @extend %clearfix;border-bottom: 2px solid color(brand);margin-bottom: $gutter-width;
+}
+.group-list{
+  float:left;
+  .icon-border{
+    margin-left: 3px;
+  }
+}
+.group-item{
+  position:relative;float:left;padding-left:40px;padding-right: 40px;background-color:color(white);border: 1px solid color(gray,light);
+  border-bottom:none;line-height: 27px;color:color(gray,dark);cursor: pointer;
+
+  & + .group-item{
+    margin-left: 5px;
+  }
+  &:hover{
+    background-color:color(brand,lightest);border-color: #c2dbee;text-decoration: none;
+  }
+  &.active{
+    background-color: color(brand);border-color:color(brand);color:color(white);
+    .icon-b-locking,.dropdown{
+      display: inline-block;
+    }
+  }
+  small{
+    font-size: 10px;
+  }
+  .icon-b-locking{
+    width: 7px;height: 9px;position: absolute;top:9px;left:27px;
+  }
+  .dropdown{
+    display: none;position: absolute;top:4px;right:6px;width: 20px;height: 20px;
+  }
+  .dropdown-menu{
+    left:auto;right:-40px;top:24px;
+    a{
+      line-height: 20px;
+    }
+  }
+  .icon-b-collapse{
+    background-color: transparent;border: none;vertical-align: top;
+  }
+}
+.locking{
+  position: relative;
+  .r-switch{
+    position: absolute;top:-2px;right:7px;
+  }
+}
+.group-title{float: left;line-height: 26px;}
+
+//筛选
+.m-filter{
+  border: 1px solid #e2e2e2;background-color: $bg-color;margin-bottom: $gutter-width;
+  dl{
+    padding: 8px 10px 8px 93px;@extend  %clearfix;position: relative;margin-bottom: 0;
+    dt{
+      position: absolute;top:10px;left:10px;color: darken(color(gray,dark),1.5%);line-height: 18px;
+    }
+    + dl{
+      border-top: 1px dashed color(gray,lighter);
+    }
+  }
+}
+.f-condition{
+  line-height: 22px;
+  > span{
+    display:inline-block;padding:2px 24px 3px 6px;max-width:184px;background-color: color(brand);border-radius: 3px;color: color(white);position: relative;
+    white-space: nowrap;overflow: hidden;text-overflow: ellipsis;margin-right: 5px;line-height: 17px;
+    .icon-o-del-01{
+      position: absolute;top:4px;right:5px;
+    }
+  }
+  a {
+    line-height: 22px;margin-left: 5px;vertical-align: top;
+
+  }
+  .icon-o-del-01{
+    width: 14px;height: 14px;
+  }
+}
+.my-filter{
+  strong{
+    font-weight: normal;margin-right: 5px;
+  }
+  .link-gray{
+    padding: 0 20px 0 6px;position: relative;
+    .icon-o-del-04{
+      display: none;width: 12px;height: 12px;position: absolute;top:6px;right:3px;
+    }
+    &.active,&:hover{
+      background-color:color(gray,lightest) ;border:1px solid color(gray,light);line-height: 24px;padding: 0 19px 0 5px;text-decoration: none;
+      .icon-o-del-04{
+        display: block;
+      }
+    }
+    + .link-gray{
+      margin-right: 2px;
+    }
+  }
+}
+
+// 联系人列表grid
+.pointer{cursor: pointer;}
+.contact-grid{
+  table{
+    > thead{
+      .checks{
+        min-width: 40px;height: 20px;
+      }
+      .contactId,.gender,.age{
+        min-width: 55px;
+      }
+      .enterpriseId,.leadsCnt,.operate{
+        min-width: 70px;
+      }
+      .province,.country{
+        min-width: 80px;
+      }
+      .department,.position,.source,.postcode,.birthday,.city,.name{
+        min-width: 90px;
+      }
+      //.communication,.qq,.mobile,.weChatNum,.county{
+      //  min-width: 100px;
+      //}
+      .telephone{
+        width: 110px;
+      }
+      .createTime,.identityNum,.region,.updateTime{
+        min-width: 150px;
+      }
+      .email{
+        min-width: 180px;
+      }
+      .company,.address,.addr{
+        min-width: 220px;
+      }
+    }
+    > tbody{
+      tr:last-of-type{
+        .drop-contact,.drop-company{
+          left:-40px;bottom:105%;top:auto;
+          .arrow{
+            transform: rotate(-180deg);
+            top:auto;left:35%;bottom:-6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+  .icon-iphone,.icon-email,.icon-qq,.icon-wechat,.icon-no-iphone,.icon-no-email,.icon-no-qq,.icon-no-wechat{
+    width: 18px;height: 18px;
+  }
+
+
+//联系信息 dropdown
+.r-dropdown-dark{
+  > span:hover{
+    cursor: pointer;
+    ~ .drop-contact{
+      display: block;
+    }
+  }
+  > a:hover{
+    ~ .drop-company{
+      display: block;
+    }
+  }
+}
+.drop-contact{
+  left:100%;
+  top:-14px;
+  .arrow{
+    top:25px;
+  }
+  .dropdown-cont{
+    padding:6px;
+    >div{
+     position: relative;padding-left: 24px;line-height: 24px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+    }
+    i{
+      position: absolute;left: 0px;top:2px;
+    }
+  }
+}
+
+// 公司信息 dropdown
+.drop-company{
+  width: 270px;
+  left:105%;
+  top:-46px;
+  .arrow{
+    top:55px;
+  }
+  .dropdown-cont{
+    img{
+      float: left;
+      margin-right: 6px;
+    }
+    .pull-right{width: 168px; color: $dropdown-dark-font;}
+    h5{margin:0 0 3px; line-height:16px;font-size: 12px; color: color(white);}
+    .company-info{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
+    i{
+      width: 17px;
+      height: 17px;
+      margin-right:3px;
+    }
+  }
+  .dropdown-dark-foot{
+    background-color: $dropdown-dark-foot;
+    dl{
+      float: left;
+      width: 65px;
+      margin: 10px 1px;
+      text-align: center;
+    }
+  }
+}
+
+.grid-import{
+  thead{
+    th{
+      text-align: left;
+    }
+    th:nth-of-type(1),th:nth-of-type(2){
+      width: 130px;
+    }
+  }
+  tbody{
+    td{
+      text-align: left;
+    }
+  }
+}
+
+/* 编辑联系方式 */
+.contact-info-form{
+  width: 490px;
+  .u-error{
+    width: 91%;margin-bottom: 0;clear: both;
+  }
+}
+.ci-item{
+  margin-bottom: 5px;@extend %clearfix;
+  .form-control{
+    width: 91%;float: left;margin-right: 10px;
+  }
+  .icon-l-det{
+    float: left;
+  }
+}
+
+/* 编辑联系人 */
+.edit-contact-box{
+  @extend %clearfix;position: relative;margin-bottom: 15px;
+}
+.contact-form{
+  position:absolute;top:0;left:0;width: 652px;z-index: 10;margin-bottom: 0;box-shadow: 3px 0 6px rgba(0,0,0,.1);
+  .panel-body{
+    padding: 10px;
+  }
+  .form-group{
+    padding-top: 9px;padding-bottom: 9px;margin-bottom: 0;
+  }
+  .error{
+    .form-control{
+      border-color: color(red);
+    }
+    .u-error{
+      line-height: $control-height;
+    }
+  }
+  table{
+    width: 1058px; border-collapse: inherit;z-index: 10;
+    tr{
+      td{
+        border: 1px solid transparent;vertical-align: top;
+      }
+      td:first-of-type{
+        width: 628px;
+      }
+      td:nth-of-type(2){
+        width: 25px;
+      }
+      td:last-of-type{
+       .form-group{
+         padding-left: 42px;padding-right: 42px;
+       }
+      }
+      &:hover{
+        td{
+          background-color: color(yellow,lighter);border-style:solid ;border-color:color(gray,lighter);border-width:1px 1px 1px 1px;
+        }
+        td:nth-of-type(2){
+          background-color: transparent;border: none;
+        }
+        td:last-of-type {
+            border-style: dashed;
+        }
+        &:last-of-type{
+          td{
+            background-color: transparent;border-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .dropdown-history{
+    width: 100%;
+    li{
+      position: relative;
+      a{
+        padding-right: 82px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;
+      }
+    }
+
+    .time{position: absolute;top:3px;right:5px;color:color(gray);font-size: 12px;}
+  }
+}
+
+.history-data{
+  float:right;width: 427px;border: 1px solid #cfdbe3;border-left:none ;background-color: #ecf2f6;margin-top: 10px;
+  h2{
+    background: url("../images/contact-tit-bg.jpg") no-repeat center center;font-size: $font-size-small;font-weight: bold;text-align: center;color: color(gray);margin-top: 15px;
+  }
+}
+
+/* 联系人详情 */
+.contact-tags{
+  height: 25px;
+}
+
+//更新记录
+//.num-1,.num-2,.num-3,.num-4,.num-5,.num-6,.num-7,.num-8,.num-9,.num-10{
+//  background: url("../images/icon-num.png") no-repeat;display: inline-block;width: 11px;height: 10px;vertical-align: text-top;position: relative;
+//  &:hover > .update-record{
+//    display: block;
+//  }
+//}
+//.num-1{
+//  background-position: 0 0;
+//}
+//.num-2{
+//  background-position: 0 -10px;
+//}
+//.num-3{
+//  background-position: 0 -20px;
+//}
+//.num-4{
+//  background-position: 0 -30px;
+//}
+//.num-5{
+//  background-position: 0 -40px;
+//}
+//.num-6{
+//  background-position: 0 -50px;
+//}
+//.num-7{
+//  background-position: 0 -60px;
+//}
+//.num-8{
+//  background-position: 0 -170px;
+//}
+//.num-9{
+//  background-position: 0 -80px;
+//}
+//.num-10{
+//  background-position: 0 -90px;
+//}
+.update-num{
+  >em{
+    color:color(brand);margin-left: 3px;position: absolute;top:-4px;-webkit-transform: scale(0.8);font-style: normal;
+  }
+
+  &:hover > .update-record{
+        display: block;
+      }
+}
+.update-record{
+  position: absolute;top:12px;left:-20px;width: 280px;height: auto;border: 1px solid color(yellow,dark);border-radius:0;box-shadow: 0 0 4px rgba(0,0,0,.2);
+  background-color: color(yellow,lightest);z-index: 100;display: none;
+  h4{
+    background-color: color(yellow,light);font-size: $font-size-small;color: color(gray);margin: 0;line-height: 28px;font-weight: bold;padding-left: 10px;
+  }
+}
+.ur-info{
+  >li{
+    margin-bottom: 1px;font-size: $font-size-small;
+    .ur-box{
+      padding:0 7px;margin-top: 1px;line-height:24px;color:color(gray,darker);
+    }
+    &:hover{
+      .ur-box{
+        background-color: color(yellow);
+      }
+    }
+    & + li{
+      border-top: 1px dashed color(yellow,dark) !important;
+    }
+  }
+  .ur-con{
+    float: left;width: 135px;white-space:nowrap;overflow: hidden;text-overflow: ellipsis;
+  }
+  .ur-time{
+    color:color(gray);float: left;width: 80px;
+  }
+  .r-btn-default{
+    vertical-align: text-bottom;
+  }
+}
+.contact-sale-grid{
+  thead{
+    th:nth-of-type(1),th:nth-of-type(3),th:nth-of-type(5){
+      width: 110px;
+    }
+    th:nth-of-type(2){
+      width: 280px;
+    }
+    th:nth-of-type(4){
+      width: 170px;
+    }
+    th:last-of-type{
+      width: 140px;
+    }
+  }
+}
+.contact-channel-gird{
+  thead{
+    th:nth-of-type(2),th:nth-of-type(3){
+      width:170px;
+    }
+    th:nth-of-type(4),th:nth-of-type(5){
+      width: 140px;
+    }
+    th:last-of-type{
+      width: 130px;
+    }
+  }
+}
+.contact-behavior-grid{
+  thead{
+    th{
+      width:170px;
+    }
+    th:nth-of-type(5){
+      width: 140px;
+    }
+    th:last-of-type{
+      width: 130px;
+    }
+  }
+}

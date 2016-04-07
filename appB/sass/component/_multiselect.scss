@@ -1,0 +1,30 @@
+.multiselect{
+  position: relative;
+}
+.multiselect-selected{
+  border: 1px solid color(gray,light);min-height: 24px;@extend %clearfix;background-color: color(white);
+  >span{
+    display:inline-block;float:left;margin: 2px 0 2px 2px;padding:0 18px 2px 5px;height: 18px;line-height: 16px;background-color: color(brand);color:color(white);position: relative;overflow: hidden;
+    .icon-b-close{
+      width: 7px;height: 7px;position: absolute;top:6px;right:5px;
+    }
+  }
+}
+.list-container{
+  width:100%;box-shadow:0 0 6px color(gray,light);border:1px solid color(gray,lighter);position: absolute;top:100%;left:0;z-index:10;padding-top: 4px;padding-bottom: 4px;background-color: color(white);
+  .list-box{
+    height: 150px;overflow-y: scroll;
+  }
+  li{
+    line-height: 20px;padding: 2px 10px;
+    & + li{
+      margin-top: 1px;
+    }
+    &:hover{
+      background-color: color(gray,lightest);
+    }
+    &.active{
+      background-color: color(brand,dark);color:color(#fff);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+$color-stack:
+(group: black, id: normal, color: #000),
+(group: white, id: normal, color: #fff),
+(group: gray, id: darker, color: #333),
+(group: gray, id: dark, color: #666),
+(group: gray, id: normal, color: #999),
+(group: gray, id: light, color: #ccc),
+(group: gray, id: lighter, color: #ddd),
+(group: gray, id: lightest, color: #ececec),
+(group: brand, id: darker, color: #0b3347),
+(group: brand, id: dark, color: #185f91),
+(group: brand, id: normal, color: #246fa5),
+(group: brand, id: light, color: #1155cc),
+(group: brand, id: lighter, color: #7cb9e6),
+(group: brand, id: lightest, color: #d9eefd),
+(group: red, id: darker, color: #8c1010),
+(group: red, id: dark, color: #a80404),
+(group: red, id: normal, color: #a30b00),
+(group: red, id: lighter, color: #ce2424),
+(group: red, id: light, color: #d77979),
+(group: orange, id: dark, color: #c65401),
+(group: orange, id: light, color: #f48567),
+(group: orange, id: lighter, color: #f7b486),
+(group: orange, id: lightest, color: #feebde),
+(group: yellow, id: darker, color: #d6ab61),
+(group: yellow, id: dark, color: #e3da95),
+(group: yellow, id: normal, color: #efe8b2),
+(group: yellow, id: light, color: #f1ecbe),
+(group: yellow, id: lighter, color: #f8fadd),
+(group: yellow, id: lightest, color: #fffad3),
+(group: cyan, id: dark, color: #40a9c7),
+(group: green, id: dark, color:#24720d),
+(group: green, id: normal, color: #208d2a),
+(group: green, id: light, color: #4daf28),
+(group: green, id: lighter, color: #79c950),
+(group: gray, id: white, color: #f5f5f5);
+
+
+
+//----------------------------
+//定义 function color
+//----------------------------
+// $group 色调
+// $shade 深浅
+// $transparency 透明度
+// =====================================================================
+@function color($group, $shade:normal, $transparency:1){
+  @each $color in $color-stack{
+    $c-group: map-get($color, group);
+    $c-shade: map-get($color, id);
+    @if($group == map-get($color, group) and $shade == map-get($color, id)){
+      @return rgba(map-get($color, color), $transparency);
+    }
+  }
+}

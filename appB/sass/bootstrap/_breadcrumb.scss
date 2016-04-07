@@ -1,0 +1,13 @@
+// breadcrumb
+.breadcrumb {
+  background-color: transparent;outline: none;padding: 11px 0 10px;margin-bottom: 0;
+  li + li:before {
+      content: '';background: image-url('icon-b-split.png') no-repeat;padding: 0 7px;
+  }
+  a{
+    cursor: pointer;
+  }
+  >.active{
+    color: color(gray,darker);
+  }
+}

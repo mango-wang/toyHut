@@ -1,0 +1,14 @@
+// compass 精灵图片
+@import "compass/utilities/sprites";
+@import "icon/*.png";
+
+.sprite-base{
+  display:inline-block;
+  vertical-align: middle;
+  width:$icon-width;
+  height:$icon-height;
+  &:focus{
+    outline:none;
+  }
+}
+@include all-icon-sprites;

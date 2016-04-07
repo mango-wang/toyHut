@@ -1,0 +1,28 @@
+// 带图标的输入框  搜索
+.r-search{
+  width: 360px;position: relative;
+  .form-control{
+    background-color: $bg-color;width: 100%;padding-right: 24px;vertical-align: middle;
+  }
+  .input-group-addon{
+    padding: 3px 5px;border-radius: 0;border:none;background-color: transparent;position: absolute;right: 1px;top:1px;z-index: 10;width: 24px;height: 24px;
+    .glyphicon{
+      color: color(gray);
+      &:hover{
+        color:color(brand);
+      }
+    }
+  }
+}
+.r-search-white{
+  @extend .r-search;
+  .form-control{
+    height: 28px;
+    background-color: #fff;
+  }
+  .input-group-addon{
+    .glyphicon{
+      padding-top: 2px;
+    }
+  }
+}

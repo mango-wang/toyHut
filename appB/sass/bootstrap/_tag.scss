@@ -1,0 +1,82 @@
+//覆盖 bootstrap 标签
+.r-label {
+  font-weight: 400;
+  padding: .2em .5em .3em;
+  font-size: 12px;
+  line-height: 23px;
+  //自定义标签删除 按钮
+  .icon-o-remove {
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-left: .3em;
+  }
+}
+//热度1-8 标签
+.label-heat1 {
+  background-color: #ff6a4c;
+}
+
+.label-heat2 {
+  background-color: #809cdb;
+}
+
+.label-heat3 {
+  background-color: #6ea77c;
+}
+
+.label-heat4 {
+  background-color: color(cyan, dark);
+}
+
+.label-heat5 {
+  background-color: #ffb65d;
+}
+
+.label-heat6 {
+  background-color: #4683d4;
+}
+
+.label-heat7 {
+  background-color: #c4a179;
+}
+
+.label-heat8 {
+  background-color: #929292;
+}
+//自定义标签
+.label-custom {
+  @include setTag(#beced3,.126em .5em .226em);
+  background-color: #d8e4e8;
+  color: color(gray, darker);
+}
+
+//添加标签 输入框
+.m-AddLabel{
+  @include setTag(#4683d4,.126em .5em);
+  &::-webkit-input-placeholder{
+    color: color(gray, darker);
+  }
+}
+//保存 按钮
+.r-btn-save{
+  padding-bottom: 2px;
+  margin-bottom: 1px;
+}
+//取消 按钮
+.r-btn-cancel{
+  color: color(brand);
+  margin: 0 0 0 5px;
+  line-height: normal;
+  &:hover {
+    text-decoration: none;
+  }
+}
+//添加 按钮
+.r-btn-add{
+  margin-bottom: 2px;
+}
+//添加标签 组件
+.addTag{
+  display: none;
+}

@@ -1,0 +1,11 @@
+@mixin prefix($attr,$value...) {
+  -webkit-#{$attr}:$value;
+  -moz-#{$attr}:$value;
+  -o-#{$attr}:$value;
+  -ms-#{$attr}:$value;
+  #{$attr}:$value;
+}
+
+%nowrap{
+  white-space: nowrap;overflow: hidden;text-overflow:ellipsis;
+}

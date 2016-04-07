@@ -1,0 +1,155 @@
+﻿.g-company{
+  background-image:url("../images/company-bg.jpg");background-position: bottom right;background-repeat: no-repeat;
+}
+.company-grid tbody td {padding:4px 5px 5px;}
+// 企业列表grid
+.company-grid{
+  table{
+    > thead{
+      .checks{
+        min-width: 31px;height: 20px;
+      }
+      .enterpriseId{
+        min-width: 55px;
+      }
+      .leadsNum,.operate{
+        min-width: 70px;
+      }
+      .contactNum,.zipCode,.manualUpdate,.entpCapital,.annualTurnover,.staffNum{
+        min-width: 80px;
+      }
+      .modifyTime,.createTime,.remark{
+        min-width: 140px;
+      }
+      .name,.address{
+        min-width: 200px;
+      }
+    }
+  }
+}
+/* 企业客户编辑 */
+.edit-header .page-header {
+  border-bottom:none;margin:0 0 14px 0;line-height:23px;padding-bottom:0;
+}
+.edit-header h1 {
+  margin:0;font-size:$font-size-base;color:color(gray, darker);
+}
+.edit-header small {
+  font-size:$font-size-small;color:color(gray,normal);
+}
+.m-form-left {
+  float:left;width:485px;
+}
+
+/* 企业客户详情 */
+.u-company-l{
+  @extend %clearfix;
+  float: left;width: 122px; margin-right: 8px;
+}
+.u-company-r{
+  @extend %clearfix;
+  float: right; width: 926px;
+}
+.m-details-box {
+  border:$box-border-color 1px solid;margin-top:10px;position: relative;
+  .icon-l-pre.disabled{
+    background: url("../images/icon-link.png") no-repeat;
+    background-position: 0 -660px;cursor: not-allowed;
+  }
+  .icon-l-next.disabled{
+    background: url("../images/icon-link.png") no-repeat;
+    background-position: 0 -680px;cursor: not-allowed;
+  }
+}
+.m-company-id {
+  position: absolute;left:60px;top:-8px;line-height:16px;padding:0 6px;width:auto; background-color:color(white,normal);text-align: center;
+}
+.m-content-box {
+  @extend %clearfix;
+  padding:3px 10px 10px;
+  >h4{
+    font-weight: bold;line-height: 1.4286;
+    small{
+      font-size: $font-size-small;color:color(gray,darker);
+    }
+  }
+}
+.company_logo {
+  width:119px;height:143px;border:color(brand,lighter) 1px solid;margin-bottom:10px;
+}
+.company_logo_img {
+  width:117px;height:117px;padding:2px;
+  img{
+    max-width: 113px;max-height: 113px;
+  }
+}
+.company_logo p {
+  height:25px;line-hieght:25px;color:#fff;background-color:color(brand,lighter); text-align: center;
+  .link-white{
+    + .link-white{
+      margin-left: 12px;
+    }
+  }
+}
+.groups_tit {
+  float:left;padding-bottom:2px;line-height:21px;font-size:$font-size-small;color:color(gray,normal);font-weight: bold;
+}
+.groups_list {
+  float:left;padding-left: 4px;
+}
+.groups_list li {
+  float:left;width:105px;line-height: 22px;color:#1155cc;
+  a{line-height: 20px;}
+  .link-icon-border-sm{
+    margin-top: 5px;
+  }
+}
+.point{display:block; float: left; margin-top:10px; margin-right:5px; width: 2px; height: 2px; background-color: #0578cb;}
+.company-sale-graid{
+  thead{
+    tr{
+      th:nth-of-type(1){min-width: 55px;}
+      th:nth-of-type(2){min-width: 80px;}
+      th:nth-of-type(5){min-width: 240px;}
+      th:nth-of-type(6){min-width: 165px;}
+      th:nth-of-type(7){min-width: 85px;}
+      th:nth-of-type(8){min-width: 100px;}
+    }
+  }
+  .pagination-total{
+    float: right;
+    margin-top: 0;
+    a{margin-left: 10px;}
+  }
+}
+.company-other-graid{
+  thead{
+    tr{
+      th:nth-of-type(1){max-width: 40px;}
+      th:nth-of-type(2){max-width: 60px;}
+      th:nth-of-type(3){max-width: 80px;}
+      th:nth-of-type(5){max-width: 80px;}
+      th:nth-of-type(7){max-width: 110px;}
+      th:nth-of-type(8){max-width: 70px;}
+      th:nth-of-type(9){max-width: 70px;}
+      th:nth-of-type(10){max-width: 90px;}
+      th:nth-of-type(11){max-width: 50px;}
+    }
+  }
+}
+.panel-heading-r{
+  float: right;
+  margin-top: 3px;
+  .m-help-icon{
+    margin-top: -5px; height: 24px;
+    i{margin-top: -3px;}
+  }
+}
+
+.form-time{
+  background-color:#ffffff !important;
+  background-image:url('../images/date-icon.png');
+  background-repeat:no-repeat;
+  background-position:382px center;
+  cursor: pointer;
+}

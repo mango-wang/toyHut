@@ -1,0 +1,36 @@
+// 圆点
+.dot{
+  display: inline-block;width: 8px;height: 8px;border-radius: 4px;background-color: #000;margin-right: 6px;
+
+}
+.type-red{
+  color:$type-red;
+  .dot{
+    background-color: $type-red;
+  }
+}
+.type-green{
+  color:$type-green;
+  .dot{
+    background-color: $type-green;
+  }
+}
+.type-gray{
+  color:$type-gray;
+  .dot{
+    background-color: $type-gray;
+  }
+}
+.type-blue{
+  color:$type-blue;
+  .dot{
+    background-color: $type-blue;
+  }
+}
+.type-brown{
+  color:$type-brown;
+  .dot{
+    background-color: $type-brown;
+  }
+}
+

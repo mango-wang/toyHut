@@ -1,0 +1,53 @@
+// 按钮
+// $bg-color：按钮背景颜色
+// $border-color：边框颜色
+// $text-color：文字颜色
+// $disabled-bg-color: 不可用背景色
+// $disabled-text-color: 不可用文字颜色
+//===============================================================
+@mixin btn-color($bg-color,$border-color,$text-color,$disabled-bg-color,$disabled-text-color) {
+  display: inline-block;
+  background-color: $bg-color;
+  border-color: $border-color;
+  color: $text-color;
+  &:hover {
+    background-color: darken($bg-color, 6%);
+    border-color: darken($border-color, 6%);
+    color: $text-color;
+  }
+  &:focus {
+    color: $text-color;
+    outline: none !important;
+  }
+  &.disabled {
+    background-color: $disabled-bg-color;
+    border-color: $disabled-bg-color;
+    color:$disabled-text-color;
+    opacity: 1;
+  }
+  i{
+    vertical-align: text-top;
+  }
+}
+
+%buttons {
+  font-size: 14px;
+  padding: 3px 28px;
+  & + .btn {
+    margin-left: 7px;
+  }
+}
+
+// 蓝色背景
+%btn-primary {
+  @include btn-color(color(brand, normal), color(brand, dark), color(white), #a1b2bc ,color(white));
+}
+
+//红色背景
+%btn-danger{
+  @include btn-color(color(red,dark),color(red,dark),color(white),#a08a8c ,color(white));
+}
+//白色背景
+%btn-default{
+  @include btn-color( color(white),color(gray,light),color(gray,darker),color(gray,lighter),color(gray));
+}

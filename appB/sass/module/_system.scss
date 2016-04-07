@@ -1,0 +1,134 @@
+.g-system-title{
+  width:100%;height:25px;padding:1px 0px;margin:10px 0 0 0;border-bottom:1px solid color(gray,light);box-sizing: content-box;
+  h1{
+    width:100%;height:24px;border-bottom:1px solid color(gray,light);padding:0px;margin:0px;box-sizing: content-box;
+    font-size:18px;font-weight:bold;color:color(gray,darker);line-height:22px;
+  }
+}
+.g-system-content{
+  width:100%;height:auto;padding:0 0 0 35px;box-sizing:border-box;
+}
+.g-system-top{
+  width:100%;height:auto;padding:10px 0 0 0;
+  h2{
+    padding:0px;margin:0px;
+    font-size:14px;font-weight:bold;color:color(gray,darker);line-height:16px;
+  }
+  span{
+    font-size:12px;color:color(gray);line-height:14px;
+  }
+  strong{
+    color:#bf4d01;
+  }
+}
+.g-system-foot{
+  width:100%;height:auto;border-bottom:1px dashed color(gray,light);padding:8px 0;
+}
+.f-srotdrag{
+  width:100%;height:auto;padding:10px 0 0 0;
+}
+.f-system-resize{
+  display:inline-block;margin:0 10px 10px 0;font-size:12px;color:#1066a4;text-decoration:underline;
+  @include prefix(tap-highlight-color,rgba(255,255,255,0));
+  @include prefix(appearance,none);
+  outline:none;
+  &:focus{
+    @include prefix(tap-highlight-color,rgba(255,255,255,0));
+    @include prefix(appearance,none);
+    outline:none;
+  }
+}
+.f-stor-submit{
+  display: none;
+}
+
+.g-setting-field-tit{
+  width:100%;height:20px;padding:0px;margin:0 0 10px 0;
+  font-size:12px;color:color(gray,darker);line-height:20px;
+  i{
+    display: block;float:left;
+  }
+  span{
+    display:block;height:20px;float:left;
+  }
+}
+.g-system-btns{
+  width:100%;height:auto;padding:0 0 15px 3px;overflow:hidden;
+  .m-field-label:nth-of-type(3n){
+    margin-right:0px;
+  }
+}
+.m-field-input{
+  display:none;
+  &:checked + label{
+    border:1px solid #246fa5;background:url("../images/icon-field-checkbox.png") no-repeat right center #d9eefd;
+  }
+  &:disabled + label{
+    color:color(gray,light);background:url("../images/icon-field-checkbox-b.png") no-repeat right center color(gray,lightest);border:1px solid color(gray,light);
+  }
+}
+.m-field-label{
+  width:30%;height:32px;border:1px solid #cccccc;display:block;float:left;margin:0 1% 5px 0;padding:0 20px 0 10px;box-sizing:border-box;cursor:pointer;
+  font-size:12px;color:color(gray,darker);line-height:30px;font-weight:normal;@extend %nowrap;
+  &:hover{
+    background-color: color(brand,lightest);border-color:color(brand,lightest);
+  }
+}
+
+//开关按钮,最蛋疼的地方
+.bootstrap-switch{
+  width: 60px !important;
+  min-width: 58px !important;
+  height: 22px !important;
+  padding:1px !important;
+  border:0px !important;
+  display: block !important;
+  border-radius: 0px !important;
+}
+.bootstrap-switch-on{
+  background-color: #4daf28 !important;
+}
+.bootstrap-switch-off{
+  background-color: #ce2424 !important;
+}
+.bootstrap-switch-container{
+  width:90px !important;
+  height: 22px !important;
+}
+.bootstrap-switch-off .bootstrap-switch-container{
+  margin-left:-32px !important;
+}
+.bootstrap-switch-handle-on{
+  width: 30px !important;
+  background-color: #4daf28 !important;
+  font-size:12px !important;
+  height:22px !important;
+  padding:0px !important;
+  line-height:22px !important;
+  text-align: center !important;
+  display: block !important;
+  float: left;
+}
+.bootstrap-switch-label{
+  width: 30px !important;
+  height: 22px !important;
+  background-size: 26px 22px !important;
+  background-position: 1px 2px !important;
+  border: none;
+  background: url("../images/md-switch.png") center no-repeat !important;
+  display: block !important;
+  float: left;
+}
+.bootstrap-switch-handle-off{
+  width: 30px !important;
+  border: none;
+  background-color: #ce2424 !important;
+  background-image: none !important;
+  padding:0px !important;
+  font-size:12px !important;
+  line-height:22px !important;
+  text-align: center !important;
+  color:#ffffff !important;
+  display: block !important;
+  float: left;
+}

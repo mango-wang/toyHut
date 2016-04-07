@@ -2,11 +2,45 @@
 @import "mixins";
 
 
-//components
+//bootstrap
+@import "bootstrap/breadcrumb";  //面包屑
+@import "bootstrap/button";      //按钮
+@import "bootstrap/btn-group";   //按钮组
+@import "bootstrap/switch";      //开关
+@import "bootstrap/input-group"; //查询
+@import "bootstrap/dropdown";    //下拉框
+@import "bootstrap/pagination";  //分页
+@import "bootstrap/tooltip";     //提示框
+@import "bootstrap/tag";         //标签
+@import "bootstrap/modal";       //弹框
+@import "bootstrap/progress";    //进度条
+@import "bootstrap/form";        //表单
+@import "bootstrap/select";      //下拉菜单
+@import "bootstrap/date-picker"; //时间控件
+@import "bootstrap/pannel";      //面板
 
-@import "component/nav";
-
+//component
+@import "component/spacing";     //间距
+@import "component/color";       //文字颜色
+@import "component/sprite";      //精灵图片
+@import "component/links";       //链接
+@import "component/dot";         //圆点
+@import "component/bar";
+@import "component/icheck";      //checkbox radio
+@import "component/grid";        //列表
+@import "component/loading";     //加载
+@import "component/sort";
+@import "component/help-tip";    //帮助提示
+@import "component/state";       //处理状态与饼图分类文字提示
+@import "component/multiselect"; //多选下拉菜单
 
 //module
 @import "module/layout";
-
+@import "module/skin";
+@import "module/contact";      //联系人
+//@import "module/company";        //企业
+//@import "module/history";        //历史记录
+//@import "module/system";         //系统管理
+//@import "module/salesLeads";     //销售线索
+//@import "module/window";         //弹框
+//@import "module/dataStatistics"; //数据统计

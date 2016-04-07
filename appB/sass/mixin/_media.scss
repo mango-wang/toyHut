@@ -1,0 +1,27 @@
+$breakpoints:(
+  small:1366px,
+  middle:1440px,
+  large:1920px
+);
+
+//----------------------------
+//定义 @mixin screen
+//----------------------------
+// $screen-size 屏幕宽度
+// =====================================================================
+@mixin screen($screen-size){
+  $breakpoint:0 ;  //default
+    @if map-has-key($breakpoints, $screen-size) {
+      $breakpoint: map-get($breakpoints, $screen-size);
+      @media screen and (min-width:  $breakpoint - 1) {
+        @content;
+      }
+    }
+}
+
+
+//@include screen(middle){
+//  background-position: center center;
+//}
+
+

@@ -1,0 +1,58 @@
+// 开关控件
+.r-switch {
+  display: inline-block;
+  .bootstrap-switch {
+    border-radius: 0;
+    span {
+      border-radius: 0;
+    }
+  }
+  //颜色设置
+  .bootstrap-switch-on, .bootstrap-switch-on.bootstrap-switch-focused {
+    border-color: #429822;
+  }
+  .bootstrap-switch-handle-on.bootstrap-switch-primary {
+    background-color: #4caf27;
+  }
+  .bootstrap-switch-off, .bootstrap-switch-off.bootstrap-switch-focused {
+    border-color: #cf2424;
+  }
+  .bootstrap-switch-handle-off.bootstrap-switch-default {
+    background-color: #cf2424;
+    color: color(white);
+  }
+  //迷你
+  .bootstrap-switch-mini {
+    .bootstrap-switch-handle-on,.bootstrap-switch-label,.bootstrap-switch-handle-off {
+      padding: 0;
+      width: 22px;
+      line-height: 1.42;
+    }
+    .bootstrap-switch-label {
+      width: 18px !important;
+    }
+    .bootstrap-switch-label {
+      background: url(../images/md-switch.png) no-repeat;background-size:100% 100%;
+    }
+  }
+  //小
+  .bootstrap-switch-small {
+    .bootstrap-switch-handle-on,.bootstrap-switch-label,.bootstrap-switch-handle-off {
+      padding: 2px 5px;
+      width: 30px;
+    }
+    .bootstrap-switch-label {
+      width: 26px !important;
+    }
+    .bootstrap-switch-label {
+      background: url(../images/md-switch.png) no-repeat;background-size:100% 100%;
+    }
+  }
+  //disabled
+  .bootstrap-switch-disabled{
+    border-color:#aeaeae; cursor: not-allowed;
+    .bootstrap-switch-handle-on.bootstrap-switch-primary,.bootstrap-switch-handle-off.bootstrap-switch-default{
+      background-color: #b7b7b7;
+    }
+  }
+}

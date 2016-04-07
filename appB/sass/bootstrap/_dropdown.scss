@@ -1,0 +1,68 @@
+.dropdown-cont{
+  padding: 10px;
+  font-size: 12px;
+  @extend %clearfix;
+}
+
+.dropdown{
+  //三角箭头默认为白色
+  .arrow , .arrow:after{
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+  }
+  .arrow{
+    top: 0;
+    left: 50%;
+    border-width: 7px;
+    margin-left: -7px;
+    margin-top: -7px;
+    border-bottom-color: color(gray,light);
+    border-top-width: 0;
+  }
+  // 可设置三角箭头边框颜色
+  .arrow:after{
+    top: 1px;
+    border-width: 6px;
+    margin-left: -6px;
+    content: " ";
+    border-top-width: 0;
+    border-bottom-color: color(white);
+  }
+  //链接颜色
+  .link-icon-gray:hover{
+    color: color(brand);
+  }
+}
+
+//白底dropdown
+.r-dropdown-white{
+  .dropdown-menu{
+    padding: 0;
+    border-radius: 0;
+    min-width: 100px;
+    max-width: 450px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.175);
+    border: 1px solid color(gray,light);
+    font-size: $font-size-small;
+  }
+}
+// 深蓝底dropdown
+.r-dropdown-dark{
+  display: inline-block;
+  .dropdown-menu{
+    padding: 0;
+    border-radius: 0;
+    color: color(white);
+    background-color: $dropdown-dark-cont;
+    border: 1px solid $dropdown-dark-border;
+    min-width: 172px;max-width: 270px;
+    font-size: $font-size-small;
+  }
+  //三角箭头
+  .arrow{left: -4px;transform:rotate(-90deg);border-bottom-color: $dropdown-dark-border;}
+  .arrow:after{border-bottom-color: $dropdown-dark-cont;}
+}

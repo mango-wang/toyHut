@@ -1,0 +1,58 @@
+// 分页
+.pagination-box{height:auto;@extend %clearfix;}
+  .r-pagination{
+    margin: 3px 0 ;float: left;
+  >li{
+    >a{
+      border:none;background-color:rgba(0,0,0,0);padding:4px 10px;margin:0 2px;border-radius:$border-radius-base;color:color(gray);cursor:pointer;
+      &:hover{
+        background-color:color(white);border-color:#d3d3d3;color:color(gray,dark);
+      }
+    }
+    .page-pre,.page-next{
+      background: image-url("icon-pagination.png") no-repeat;
+    }
+    .page-pre{
+      background-position: 0 0;
+      &:hover{background-position: 0 -30px;}
+    }
+    .page-next{
+      background-position:-30px 0;
+      &:hover{background-position: -30px -30px;}
+    }
+    &.disabled{
+      a{
+        color: color(gray,light);background-color: transparent;
+        &:hover{
+          color: color(gray,light);
+        }
+      }
+      .page-pre {
+        background-position: 0 -60px;
+      }
+      .page-next{
+        background-position: -30px -60px;
+      }
+    }
+  }
+}
+// 总页数
+.pagination-total{
+  font-size:$font-size-small;float:left;margin-top:7px;
+  span{
+    padding:0 4px;font-weight: bold;color: color(brand);
+  }
+}
+
+//每页条数
+.pagination-pagenum{
+  font-size:$font-size-small;float: left;margin: 5px 15px 0 20px;
+}
+
+//分页水平居中
+.pagination-center {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -25%;
+}

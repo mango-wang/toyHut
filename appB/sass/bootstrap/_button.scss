@@ -1,0 +1,23 @@
+.r-btn-primary{
+  @extend %btn-primary;
+  @extend %buttons;
+}
+.r-btn-default{
+  @extend %btn-default;
+  @extend %buttons;
+}
+.r-btn-danger{
+ @extend %btn-danger;
+  @extend %buttons;
+}
+
+.btn-lg{
+
+}
+.btn-md{
+  padding: 1px 14px 2px;
+  font-size: $font-size-small;
+}
+.btn-sm{
+  padding: 0 7px 1px;line-height:14px;font-size: $font-size-small;
+}

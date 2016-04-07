@@ -1,0 +1,7 @@
+//loading
+%backdrop{
+  width:100%;height:100%;position:absolute;top:0px;left:0px;z-index:999999;background-color: rgba(0,0,0,0.5);
+}
+
+.m-loading{background:url("../images/loading.gif") no-repeat center rgba(0,0,0,0.2) ;background-size:60px; @extend %backdrop;}
+.m-backdrop{@extend %backdrop;}

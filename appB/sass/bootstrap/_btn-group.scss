@@ -1,0 +1,32 @@
+.r-btn-group{
+  .link-icon-dark{
+    background-color: $bg-color;line-height: 20px;
+    padding: 2px 7px;
+    border-radius: 0;
+    font-size: 12px;
+    i{
+      width: 20px;height: 20px;display: inline-block;float: left;
+      background-image: image-url("../images/icon-link.png");background-position: 0 0;
+    }
+    .icon-l-clean{background-position: 0 0;}
+    .icon-l-normal{background-position: 0 -20px;}
+    .icon-l-nodb{background-position: 0 -40px;}
+    .icon-l-lead{background-position: 0 -60px;}
+    .icon-l-export{background-position: 0 -80px;}
+    &:hover {
+      border-color: color(brand,normal);
+      color: color(brand,normal);text-decoration:none;
+      .icon-l-css{
+        background-position: 0 -100px;
+      }
+      .icon-l-clean{background-position: 0 -100px;}
+      .icon-l-normal{background-position: 0 -120px;}
+      .icon-l-nodb{background-position: 0 -140px;}
+      .icon-l-lead{background-position: 0 -160px;}
+      .icon-l-export{background-position: 0 -180px;}
+      &:focus{
+        color:color(brand,normal);
+      }
+    }
+  }
+}
