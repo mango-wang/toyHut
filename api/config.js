@@ -3,6 +3,11 @@
  */
 module.exports = {
     /*
+    mysql
+     */
+
+
+    /*
      服务器配置
      */
     Host: "127.0.0.1",
