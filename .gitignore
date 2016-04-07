@@ -9,3 +9,5 @@ app/dist
 app/bower_components
 appB/dist
 appB/bower_components
+api/config.js
+api/node_modules
