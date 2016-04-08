@@ -27,8 +27,13 @@ require.config({
         bootstrapSwitch: 'bower_components/bootstrap-switch/dist/js/bootstrap-switch',
         angularSwitch: 'bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch',
         codeMirror: 'bower_components/ueditor/third-party/codemirror/codemirror',
-        perfectScrollbar: 'bower_components/perfect-scrollbar/js/perfect-scrollbar',
-        perfectScrollbarJquery: 'bower_components/perfect-scrollbar/js/perfect-scrollbar.jquery'
+        calendar: 'bower_components/fullcalendar/dist/fullcalendar',
+        gcal: 'bower_components/fullcalendar/dist/gcal',
+        angularCalendar: 'bower_components/angular-ui-calendar/src/calendar',
+        angularDateTimePicker: 'bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker',
+        angularQrCode: 'bower_components/angular-qrcode/angular-qrcode',
+        qrcodeGenerator: 'bower_components/qrcode-generator/js/qrcode',
+        uaParser: 'bower_components/ua-parser-js/src/ua-parser'
     },
     shim: {
         'angular': {deps: ["jquery"], 'exports': 'angular'},
@@ -73,13 +78,22 @@ require.config({
         'codeMirror': {
             'exports': 'CodeMirror'
         },
-        'perfectScrollbar': {
-            deps: ['jquery']
-        },
-        'perfectScrollbarJquery': {
-            deps: ['jquery']
-        },
         'jqueryCookie': {
+            deps: ['jquery']
+        },
+        'calendar': {
+            deps: ['jquery', 'moment']
+        },
+        'angularCalendar': {
+            deps: ['angular', 'calendar', 'jquery', 'moment']
+        },
+        'angularDateTimePicker': {
+            deps: ['angular', 'moment', 'bootstrap']
+        },
+        'angularQrCode': {
+            deps: ['angular', 'qrcodeGenerator']
+        },
+        'uaParser': {
             deps: ['jquery']
         }
     },
@@ -101,7 +115,7 @@ require.config({
     deps: [],
     callback: null,
     timeOut: 1,
-    urlArgs: "v=0.2",
+    urlArgs: "v=0.1",
     baseUrl: './'
 });
 
@@ -114,6 +128,6 @@ require([
 ], function (angular) {
     angular.element().ready(function () {
         // bootstrap the app manually
-        angular.bootstrap(document, ['SCoreDataManage']);
+        angular.bootstrap(document, ['toyHut']);
     });
 });
