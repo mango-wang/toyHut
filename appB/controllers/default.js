@@ -6,9 +6,8 @@ define([
         '$rootScope',
         '$scope',
         '$route',
-        'settingService',
         '$timeout',
-        function ($rootScope, $scope, $route, settingService, $timeout) {
+        function ($rootScope, $scope, $route,  $timeout) {
             $rootScope.pageTitle = "标签设置";
 
             $timeout(function () {

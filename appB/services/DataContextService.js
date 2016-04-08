@@ -1,4 +1,4 @@
-define(['services/services','angular'], function (services,angular) {
+define(['services/services'], function (services) {
     services.
     factory('daoService', [
         'sBaseService',
@@ -18,7 +18,7 @@ define(['services/services','angular'], function (services,angular) {
                     size: 0,
                     orn: '',
                     dst: '',
-                    type: 0x0002,
+                    type: '',
                     cmd: '',
                     sess: '',
                     seq: 0,

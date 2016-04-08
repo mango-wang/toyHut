@@ -38,6 +38,7 @@ define([
         'directives',
         'filters',
         'services',
+        'sbase'
     ]).run(function () {
         //window.Ps = require('perfectScrollbar');
         //require('perfectScrollbarJquery');

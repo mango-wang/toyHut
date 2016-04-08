@@ -12,7 +12,7 @@ require.config({
         angularMd5: 'bower_components/angular-md5/angular-md5',
         angularUpload: 'bower_components/ng-file-upload/ng-file-upload',
         angularUploadShim: 'bower_components/ng-file-upload/ng-file-upload-shim',
-        jquery: 'bower_components/jquery/jquery',
+        jquery: 'bower_components/jquery/dist/jquery',
         jqueryCookie: 'bower_components/jquery.cookie/jquery.cookie',
         bootstrap: 'bower_components/bootstrap/dist/js/bootstrap',
         ueditor: 'bower_components/ueditor/ueditor.all',
@@ -127,7 +127,7 @@ require([
     'bootstrap'
 ], function (angular) {
     angular.element().ready(function () {
-        // bootstrap the app manually
+        // bootstrap tdebugger;
         angular.bootstrap(document, ['toyHut']);
     });
 });

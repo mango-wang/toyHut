@@ -4,8 +4,8 @@ define(['./app'], function (app) {
         $sceProvider.enabled(false);
         $routeProvider.otherwise({redirectTo: '/Error'});
         $routeProvider.when('/', {
-            templateUrl: 'views/index.html',
-            controller: "default",
+            templateUrl: 'view/index.html',
+            controller: "",
             resolve: {
                 message: function () {
                     window.location.href = "index.html#/Index";
@@ -13,8 +13,8 @@ define(['./app'], function (app) {
             }
         });
         $routeProvider.when('/Index', {
-            templateUrl: 'views/index.html',
-            controller: 'default'
+            templateUrl: 'view/index.html',
+            controller: ''
         });
     }]);
 });
