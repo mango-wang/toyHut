@@ -23,6 +23,6 @@ module.exports = {
     module: {
         "01-0001-0000": "test/serviceTest",
         "01-0001-0001": "user/login",
-        "01-0001-0002":""
+        "01-0001-0002":"vip/vip"
     }
 };

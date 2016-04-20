@@ -1,0 +1,121 @@
+.s-container {
+  margin: 10px auto;
+  width: 960px;
+  border-bottom: 0 solid #F9D6EC;
+  background: url(../images/body-smart.png) repeat-y 50% 0;
+  height: 400px;
+
+}
+
+main {
+  -webkit-flex-shrink: 0;
+  -moz-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin: 5px 0;
+}
+
+.main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0px auto;
+  -moz-box-flex: 1;
+  -moz-flex: 1 0px auto;
+  -ms-flex: 1 0px auto;
+  flex: 1 0px auto;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  z-index: 1;
+}
+
+.vip-from {
+  label {
+    font-family: "Brandon-Bold", Helvetica, Arial, sans-serif
+  }
+  width: 700px;
+  background-color: white;
+  margin: 0 auto;
+  .vip-from-p {
+    padding: 30px 20px 60px 60px;
+  }
+  min-height: 400px;
+
+  input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: lato;
+    background-color: #55acee;
+    color: white;
+    border-radius: 50px;
+    border: none;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-heading {
+
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  font-family: Lato;
+  transform: none;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.bs-circle {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 22%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #55acee;
+  vertical-align:middle;
+  text-align: center;
+  .glyphicon{
+    margin: 34%;
+    font-size: x-large;
+    color: white;
+  }
+}
+.service-heading{
+  margin: 18px 70px;
+  text-transform: none;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+
