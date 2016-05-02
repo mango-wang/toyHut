@@ -5,22 +5,22 @@ var vip = {
         var $this = this;
         //init Data
         $this.getState($this);
-        $('#joinIn').click(function () {
-
-            $this.submit($this);
-        })
+        //$('#joinIn').click(function () {
+        //
+        //    $this.submit($this);
+        //})
     },
     selectState: function (data) {
         data.data[1].state = data.data[0];
         data.data[1].changeState();
 
     },
-    changeState:function(){
+    changeState: function () {
         $('#currentState').html(this.state.acronym);
     },
     getState: function ($this) {
 
-        $.post('http://127.0.0.1:8888', { cmd:'getStates',module:'01-0001-0002'}, function (result) {
+        $.post(window.config.apiUrl, {cmd: 'getStates', module: '01-0001-0002'}, function (result) {
             if (result) {
                 for (var i = 0; i < result.length; i++) {
                     var li = $('<li/>').html('<a>' + result[i].acronym + '</a>');
@@ -34,19 +34,29 @@ var vip = {
         var joinIn = {
             email: $('#email').val(),
             firstName: $('#name').val(),
-            state: $this.state.id,
-            type:1,
-            cmd:'set',
-            module:'01-0001-0002'
+            state: $this.state.id | 0,
+            type: 1,
+            cmd: 'set',
+            module: '01-0001-0002'
         }
-        $.post('http://127.0.0.1:8888', joinIn, function (data) {
-            if (data) {
+        $.post(window.config.apiUrl, joinIn, function (data) {
+            if (data['result'] == 0) {
+                //成功
+                window.location.href='sucess.html';
+            } else {
+                window.location.href='sucess.html';
+//稍后重试
 
             }
         }, 'json');
     }
 }
-$(function(){
+
+function vipSubmit() {
+    vip.submit(vip);
+    return false;
+}
+$(function () {
     vip.init();
 })
 

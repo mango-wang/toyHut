@@ -1,10 +1,9 @@
 define(['services/services'], function (services) {
     services.
     factory('daoService', [
-        'sBaseService',
         '$http',
         '$q',
-        function (sBaseService, $http, $q) {
+        function ($http, $q) {
             function Context() {
             }
 
@@ -14,25 +13,15 @@ define(['services/services'], function (services) {
                 desc: "内部服务器错误"
             };
             Context.prototype.exec = function (command, callback) {
-                var cmd = {
-                    size: 0,
-                    orn: '',
-                    dst: '',
-                    type: '',
-                    cmd: '',
-                    sess: '',
-                    seq: 0,
-                    ver: '',
-                    body: ''
-                };
+                var cmd = {};
                 angular.extend(cmd, command);
                 $http({
                     method: 'post',
-                    url: '',
-                    data: {
-                        command: cmd
+                    url: window.config.apiUrl,
+                    data: cmd,
+                    transformRequest: function (data) {
+                        return $.param(data);
                     },
-                    transformRequest: sBaseService.transform,
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
@@ -43,7 +32,7 @@ define(['services/services'], function (services) {
                         }
                     } else {
                         if (typeof callback === "function") {
-                            callback(data["body"]);
+                            callback(data);
                         }
                     }
                 }).error(function (data, status) {
@@ -75,7 +64,7 @@ define(['services/services'], function (services) {
                     data: {
                         command: command
                     },
-                    transformRequest: sBaseService.transform,
+
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
@@ -86,7 +75,7 @@ define(['services/services'], function (services) {
                         }
                     } else {
                         if (typeof callback === "function") {
-                            deferred.reject(data["body"]);
+                            deferred.reject(data);
                         }
                     }
                 }).error(function (data, status) {

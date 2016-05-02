@@ -94,7 +94,6 @@ module.exports = {
 
                     var list = [];
                     for (var i = 0; i < data.length; i++) {
-
                         list.push("('" + data[i].stateFullName + "','" + data[i].nickNameZh + "','" + data[i].acronym + "','" + data[i].capital + "','" + data[i].capitalNameZh + "')");
 
                     }

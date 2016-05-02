@@ -4,6 +4,7 @@
  * properly referenced in one of the module dependencies in the array.
  **/
 define([
-    './common'
+    './common',
+    './Pager'
 ], function () {
 });

@@ -8,10 +8,8 @@ define([
         '$route',
         '$timeout',
         function ($rootScope, $scope, $route,  $timeout) {
-            $rootScope.pageTitle = "标签设置";
 
-            $timeout(function () {
-            }, 500);
+
 
         }])
 });

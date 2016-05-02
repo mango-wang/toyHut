@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link href="bower_components/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/toyHot.css"/>
+    <script src="config.js"></script>
     <script data-main="main"  src="bower_components/requirejs/require.js"></script>
 </head>
 <body>
@@ -24,15 +25,15 @@
                 management<span
                         class="icon-b-arrow"></span></h2>
                 <ul class="m-sub-nav collapse in" id="collapse1">
-                    <li><a href="../Contacts/List.html">vip</a></li>
-                    <li><a href="../Company/List.html">support</a></li>
+                    <li><a href="#/Index">vip</a></li>
+                    <li><a href="#/Company/List.html">support</a></li>
                 </ul>
             </li>
             <li><h2 data-toggle="collapse" data-target="#collapse2"><span class="icon-n-marketing"></span>goods data
                 management <span
                         class="icon-b-arrow"></span></h2>
                 <ul class="m-sub-nav collapse in" id="collapse2">
-                    <li><a href="">list</a></li>
+                    <li><a href="#/Company/List.html">list</a></li>
                 </ul>
             </li>
         </ul>
@@ -42,7 +43,7 @@
         <div class="g-right-top g-contact">
             <ul class="breadcrumb r-breadcrumb">
                 <li><a href="">Home</a></li>
-                <li class="active">企业客户管理</li>
+                <li class="active">vip management</li>
             </ul>
         </div>
         <div class="m-container" ng-view>

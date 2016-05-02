@@ -13,22 +13,17 @@
         <li ng-class="{disabled: conf.currentPage == conf.numberOfPages}"
             ng-click="changeCurrentPage(conf.numberOfPages)"><a>末页</a></li>
     </ul>
-    <div class="pagination-pagenum" ng-if="conf.showPageCount">当页显示
-        <div class="dropdown r-select-thin select-sm" style="position:relative;">
+    <div class="pagination-pagenum" ng-if="conf.showPageCount && conf.totalItems > 0">当页显示
+        <div class="dropdown r-select-thin select-sm">
             <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
                 {{conf.itemsPerPage}}
                 <span class="caret"></span>
             </button>
-            <!--<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">-->
-                <!--<li ng-repeat="perPageOption in conf.perPageOptions"><a ng-click="changeItemsPerPage(perPageOption)">{{perPageOption}}</a>-->
-                <!--</li>-->
-            <!--</ul>-->
-            <select class="select" style="width:100%;height:100%;position:absolute;left:0px;top:0px;opacity:0;border:0px;outline: none;"
-                ng-model="conf.itemsPerPage" ng-options="perPageOption for perPageOption in conf.perPageOptions">
-            </select>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li ng-repeat="perPageOption in conf.perPageOptions"><a ng-click="changeItemsPerPage(perPageOption)">{{perPageOption}}</a></li>
+            </ul>
         </div>
         条数据
     </div>
-    <div class="pagination-total">共<span>{{conf.numberOfPages}}</span>页，共<span>{{conf.totalItems}}</span>{{conf.extText?conf.extText:"条"}}
-    </div>
+    <div class="pagination-total" ng-if="conf.totalItems > 0">共<span>{{conf.numberOfPages}}</span>页，<span>{{conf.totalItems}}</span>条</div>
 </div>

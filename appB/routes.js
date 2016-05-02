@@ -12,9 +12,13 @@ define(['./app'], function (app) {
                 }
             }
         });
+        $routeProvider.when('/Error',{
+            templateUrl: 'view/404.html',
+            controller: ''
+        }),
         $routeProvider.when('/Index', {
             templateUrl: 'view/index.html',
-            controller: ''
+            controller: 'vipList'
         });
     }]);
 });

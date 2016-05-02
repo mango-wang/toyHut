@@ -54,8 +54,9 @@ ul {
   transform: translate3d(0, 0, 0);
   z-index: 11;
 }
+
 .header-bg {
-   background: url(../images/body.png) repeat-y 50% 0;
+  background: url(../images/body.png) repeat-y 50% 0;
   //padding-top: 8px;
   //padding-bottom: 8px;
   //border-bottom: none;
@@ -137,8 +138,8 @@ ul {
       -o-transition: color 0.3s, border 0.3s;
       transition: color 0.3s, border 0.3s;
     }
-    &:hover{
-      >a {
+    &:hover {
+      > a {
         color: #ef3742;
         border-color: #ef3742;
       }
@@ -152,9 +153,7 @@ ul {
     //}
   }
 
-
 }
-
 
 //////////////
 .header-usertools {
@@ -163,15 +162,18 @@ ul {
   right: 0;
   margin-top: -15px;
 }
-.header-usertools>li.nav-search {
+
+.header-usertools > li.nav-search {
   display: block;
   margin-right: -3px;
 }
-.header-usertools>li.nav-search>a {
+
+.header-usertools > li.nav-search > a {
   position: relative;
   text-indent: -999em;
 }
-.header-usertools>li>a {
+
+.header-usertools > li > a {
   display: block;
   width: 24px;
   height: 30px;
@@ -179,6 +181,7 @@ ul {
   font-size: 23px;
   color: #000;
 }
+
 //////////////////////
 
 @media (min-width: 1024px) {
@@ -249,14 +252,152 @@ ul {
   }
 }
 
-
 @media (min-width: 480px) {
   .header-usertools > li.nav-search {
     margin-right: 0;
   }
 }
-.generic-copy--design:after, .account .account-menu:after, .account.myinfo main fieldset:after, .account.addresses main form fieldset:after, .account main .account-wrap>#info dl:after, .account main .account-wrap>#shipping dl:after, .account main .account-wrap>#billing dl:after, .account.return-detail main .account-wrap:after, .account.return-detail main .print-only dl:after, .account.return-detail main .return-info:after, .registered-items:after, .registered-products .account-wrap:after, .posts .image-holder:after, .blog.detail main .article-container:after, .blog.detail main .article-body .blog-gallery:after, .alternate-payments:after, .cart-buy:after, .cart-footer__wrap:after, .cart-login:after, .cart-options:after, .cart-quantity:after, .checkout .header-main .wrap:after, .checkout-nav ol:after, .checkout-container:after, .checkout-container ul:after, .checkout-container li:after, .checkout .checkout-container .billing:after, .checkout .checkout-container .billing .payment-method>div:after, .exploded-features:after, .feature-floated__wrapper:after, .footer-main:after, .footer-navigation ul:after, .giftcards.purchase main .giftcard-wrap:after, .header-main:after, .header-wrap:after, .nav-main:after, .nav-primary:after, .nav-primary .nav-shop .drop ol:after, .header-usertools:after, .home .related-products .tabs-nav:after, .page-menu:after, .products .product-tile-wrap:after, .product-detail form:after, .product-detail .colorways:after, .product-detail .product-sizes:after, .product-details .columns:after, .product-details .column ul:after, .featured-before-after .detail-block__content-media:after, #quickview .controls:after, .quickview .product-detail:after, .zoom-overlay:after, .register-product-email:after, .product.detail .reviews .review-wrapper:after, .members:after, .team.detail .member-media-base .direction:after, .IconAndText:after{
+
+.generic-copy--design:after, .account .account-menu:after, .account.myinfo main fieldset:after, .account.addresses main form fieldset:after, .account main .account-wrap > #info dl:after, .account main .account-wrap > #shipping dl:after, .account main .account-wrap > #billing dl:after, .account.return-detail main .account-wrap:after, .account.return-detail main .print-only dl:after, .account.return-detail main .return-info:after, .registered-items:after, .registered-products .account-wrap:after, .posts .image-holder:after, .blog.detail main .article-container:after, .blog.detail main .article-body .blog-gallery:after, .alternate-payments:after, .cart-buy:after, .cart-footer__wrap:after, .cart-login:after, .cart-options:after, .cart-quantity:after, .checkout .header-main .wrap:after, .checkout-nav ol:after, .checkout-container:after, .checkout-container ul:after, .checkout-container li:after, .checkout .checkout-container .billing:after, .checkout .checkout-container .billing .payment-method > div:after, .exploded-features:after, .feature-floated__wrapper:after, .footer-main:after, .footer-navigation ul:after, .giftcards.purchase main .giftcard-wrap:after, .header-main:after, .header-wrap:after, .nav-main:after, .nav-primary:after, .nav-primary .nav-shop .drop ol:after, .header-usertools:after, .home .related-products .tabs-nav:after, .page-menu:after, .products .product-tile-wrap:after, .product-detail form:after, .product-detail .colorways:after, .product-detail .product-sizes:after, .product-details .columns:after, .product-details .column ul:after, .featured-before-after .detail-block__content-media:after, #quickview .controls:after, .quickview .product-detail:after, .zoom-overlay:after, .register-product-email:after, .product.detail .reviews .review-wrapper:after, .members:after, .team.detail .member-media-base .direction:after, .IconAndText:after {
   clear: both;
   content: "";
   display: block;
+}
+
+//footer
+
+.footer-main {
+  margin-top: 20px;
+  background-color: #f3d5dd;
+  padding: 40px 20px;
+  text-align: center;
+  .footer-warp {
+    position: relative;
+
+  }
+  .footer-logo {
+    position: absolute;
+    top: -22px;
+    left: 24px;
+  }
+  .social {
+    font-size: 0;
+    margin: 4px;
+    &li {
+      display: inline-block;
+      vertical-align: top;
+    }
+    a{
+      display: block;
+      position: relative;
+      text-indent: -999em;
+      border: 2px solid #333;
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+      line-height: 28px;
+      color: #333;
+      overflow: hidden;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      -webkit-transition: opacity 0.3s;
+      -moz-transition: opacity 0.3s;
+      -o-transition: opacity 0.3s;
+      transition: opacity 0.3s;
+    }
+    .tumblr a:after {
+      content: "\e606";
+    }
+     a:after {
+      right: 0;
+      text-align: center;
+    }
+     a:after {
+      content: "";
+    }
+     a:after {
+      font-family: "Icons";
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: normal;
+      speak: none;
+      text-transform: none;
+      left: 0;
+      position: absolute;
+      text-indent: 0;
+      top: 0;
+    }
+
+  }
+}
+@media (min-width: 1024px) {
+  .footer-main .social a {
+    text-indent: 999em;
+  }
+}
+.footer-main .social a {
+  border: 2px solid #fff;
+  color: #fff;
+}
+.footer-navigation {
+  & li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-navigation > li {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px 15px;
+  }
+}
+  @media (min-width: 768px) {
+    .footer-navigation li {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+
+@media (min-width: 768px) {
+  .footer-main .social li {
+    margin: 0 0 8px 8px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-main .footer-wrap {
+    warp: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-main .footer-wrap {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-main .social li {
+    margin: 0 0 8px 8px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-main .social {
+    width: 23%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-main .social {
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    text-align: right;
+  }
 }

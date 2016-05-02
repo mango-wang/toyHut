@@ -18,7 +18,6 @@ define([
     './directives/index',
     './filters/index',
     './services/index',
-    './services/SBaseService'
 ], function (angular) {
     // Declare app level module which depends on views, and components
     return angular.module('toyHut', [
@@ -38,7 +37,6 @@ define([
         'directives',
         'filters',
         'services',
-        'sbase'
     ]).run(function () {
         //window.Ps = require('perfectScrollbar');
         //require('perfectScrollbarJquery');

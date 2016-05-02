@@ -1,8 +1,14 @@
 @import "var";
 @import "mixins";
 
+//bootstrap
 
+@import "bootstrap/dropdown";
+//@import "bootstrap/form";
 
+//
+@import "mixin/color";
+@import "mixin/clearfix";
 
 //module
 @import "module/layout";

@@ -1,0 +1,38 @@
+// form 表单
+.r-form{
+  // label
+  .control-label,label{
+    font-weight: normal;padding-top: 0;line-height: 26px;
+  }
+  .form-group{
+    margin-bottom: 20px;
+  }
+  //水平表单
+  &.form-horizontal .form-group{
+    margin-left: -5px;margin-right: -5px;
+  }
+
+}
+
+// text
+.form-control{
+  padding:4px 8px;height:$control-height;font-size: 12px;border-radius: 0;color: inherit;
+}
+// textarea
+textarea.form-control{
+  resize: none;line-height: $control-height;
+}
+
+//错误提示
+.u-error{
+  color:color(red);margin-bottom: -15px;
+}
+
+//去掉number右侧的加减
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+input[type="number"]{-moz-appearance:textfield;}

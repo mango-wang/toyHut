@@ -45,16 +45,33 @@
 </div>
 <!--统计信息结束-->
 <div class="m-bar">
-    <div class="input-group r-search pull-left">
-        <input type="text" class="form-control" placeholder="姓名/企业/电话/邮箱">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="r-datePicker datePicker-md">
+                <input class="form-control" type="text" ng-change="search()" options="options" date-range-picker ng-model="concernedDate">
+                <i class="icon-c-datepicker"></i>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input-group r-search pull-left">
+                <input type="text" class="form-control" placeholder="email/state" ng-model="keyWord">
 
-        <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search" ng-click="search()"></i></div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="btn-group r-btn-group pull-right">
+                <span class="group-title">data：</span>
+                <a type="button" class="btn btn-default link-icon-dark" href="#exportData"  data-toggle="modal"><i
+                        class="icon-l-export"></i><span>export</span></a>
+            </div>
+        </div>
+
     </div>
-    <div class="btn-group r-btn-group pull-right">
-        <span class="group-title">data：</span>
-        <a type="button" class="btn btn-default link-icon-dark" href="#exportData" data-toggle="modal"><i
-                class="icon-l-export"></i><span>export</span></a>
-    </div>
+
+
+
 </div>
 <!--联系人列表开始-->
 <div class="m-grid grid-blue-lg company-grid">
@@ -68,48 +85,23 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>844487@qq.com</td>
-            <td>
+        <tr ng-repeat="item in vipList">
+            <td ng-bind="item.email">844487@qq.com</td>
+            <td ng-bind="item.acronym" title="{{item.capital}}">
 
             </td>
-            <td>vip</td>
-            <td>2016-4-8</td>
-        </tr>
-        <tr>
-            <td>844487@qq.com</td>
-            <td>
-
-            </td>
-            <td>vip</td>
-            <td>2016-4-8</td>
+            <td ng-bind="item.type">vip</td>
+            <td ng-bind="item.createTime">2016-4-8</td>
         </tr>
         </tbody>
         <tfoot>
         <tr>
-            <th colspan="14" class="icheck">
-                <div class="pagination-center">
-                    <div class="pagination-box">
-                        <ul class=" pagination r-pagination">
-                            <li class="disabled"><a href="#">首页</a></li>
-                            <li class="disabled"><a href="#" class="page-pre">&nbsp;&nbsp;</a></li>
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#" class="page-next">&nbsp;&nbsp;</a></li>
-                            <li><a href="#">末页</a></li>
-                        </ul>
-                        <div class="pagination-pagenum">当页显示 条数据</div>
-                        <div class="pagination-total">共<span>1311</span>位联系人</div>
-                    </div>
-                </div>
-
+            <th colspan="4" class="icheck">
+                <tm-pagination conf='paginationConf'></tm-pagination>
             </th>
         </tr>
         </tfoot>
     </table>
 </div>
+
 <!--联系人列表结束-->
