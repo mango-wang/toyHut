@@ -1,0 +1,21 @@
+{
+  "name": "toy hut mobile",
+  "homepage": "https://github.com/mango-wang/toyHut",
+  "authors": [
+    "mango"
+  ],
+  "description": "for moblie info",
+  "main": "",
+  "keywords": [
+    "moblie"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
